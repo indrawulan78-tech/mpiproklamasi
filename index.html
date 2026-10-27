@@ -1,0 +1,2716 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MPI Sejarah: Detik-Detik Proklamasi Kemerdekaan Indonesia - Kelas XI SMA</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: {
+              50: '#fdfbf7',
+              100: '#f8f4eb',
+              200: '#f1e8d6',
+              300: '#e5d5b7',
+              400: '#d5bd92',
+              800: '#524022',
+              900: '#342612',
+            },
+            merah: {
+              500: '#dc2626',
+              600: '#b91c1c',
+              700: '#991b1b',
+              800: '#7f1d1d',
+              900: '#450a0a',
+            },
+            sepiaInk: '#261e14',
+            sepiaMuted: '#685e52',
+            vintageGold: '#c28b26',
+            vintageBrass: '#a16207',
+          },
+          fontFamily: {
+            title: ['Cinzel', 'serif'],
+            display: ['Playfair Display', 'serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            typewriter: ['Special Elite', 'monospace'],
+          },
+          boxShadow: {
+            'vintage': '0 10px 25px -5px rgba(69, 10, 10, 0.15), 0 8px 10px -6px rgba(52, 38, 18, 0.2)',
+            'paper': '2px 4px 15px rgba(60, 40, 10, 0.12), inset 0 0 40px rgba(180, 140, 80, 0.08)',
+            'gold': '0 0 20px rgba(194, 139, 38, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Texture and vintage atmosphere */
+    body {
+      background-color: #f7f3e8;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(220, 38, 38, 0.03) 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(161, 98, 7, 0.04) 0%, transparent 30%),
+        repeating-linear-gradient(45deg, rgba(60, 40, 10, 0.012) 0px, rgba(60, 40, 10, 0.012) 1px, transparent 1px, transparent 12px);
+      color: #261e14;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #eee5d3;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c28b26;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #991b1b;
+    }
+
+    /* Flip Card 3D Styling */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      top: 0;
+      left: 0;
+      border-radius: 0.75rem;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Smooth page fade transition */
+    .screen-view {
+      display: none;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+    }
+    .screen-view.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Vintage Ribbon & Stamp */
+    .stamp-badge {
+      border: 3px double #991b1b;
+      box-shadow: 0 0 0 2px #dc2626;
+      transform: rotate(-3deg);
+    }
+
+    /* Confetti Canvas */
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Print styles for Certificate */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #certificate-printable, #certificate-printable * {
+        visibility: visible;
+      }
+      #certificate-printable {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+        background: white !important;
+        box-shadow: none !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between select-none">
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- TOP APP HEADER (Visible once logged in) -->
+  <header id="main-header" class="hidden sticky top-0 z-40 bg-parchment-100/95 backdrop-blur-md border-b border-parchment-300 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
+      <div class="flex items-center justify-between gap-4">
+        
+        <!-- Left: Logo & Subject Title -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-merah-700 text-white flex items-center justify-center font-title font-bold text-lg shadow border border-amber-300">
+            1945
+          </div>
+          <div>
+            <h1 class="text-sm font-bold text-merah-800 tracking-wider font-title uppercase">
+              MPI Sejarah Kelas XI
+            </h1>
+            <p class="text-xs text-sepiaMuted flex items-center gap-1 font-medium">
+              <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Detik-Detik Proklamasi Kemerdekaan
+            </p>
+          </div>
+        </div>
+
+        <!-- Center: Student Greeting & Progress Bar -->
+        <div class="hidden md:flex flex-col items-center flex-1 max-w-md mx-6">
+          <div class="w-full flex justify-between items-center text-xs mb-1 font-semibold text-sepiaInk">
+            <span class="flex items-center gap-1.5 text-merah-700">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+              </svg>
+              <span id="header-student-greeting">Pejuang: Siswa</span>
+            </span>
+            <span id="header-progress-text" class="text-vintageBrass font-mono">0% Terjelajahi</span>
+          </div>
+          <div class="w-full bg-parchment-200 rounded-full h-2.5 overflow-hidden border border-parchment-300">
+            <div id="header-progress-bar" class="bg-gradient-to-r from-amber-500 to-merah-600 h-2.5 rounded-full transition-all duration-500" style="width: 5%"></div>
+          </div>
+        </div>
+
+        <!-- Right: Action Buttons (Audio, Help, Dashboard) -->
+        <div class="flex items-center gap-2">
+          <!-- Audio SFX Toggle -->
+          <button id="btn-toggle-sound" onclick="toggleSound()" title="Aktif/Nonaktifkan Suara" class="p-2 rounded-lg bg-parchment-200 hover:bg-parchment-300 text-sepiaInk border border-parchment-300 transition-colors flex items-center gap-1 text-xs font-semibold">
+            <span id="sound-icon">🔊</span>
+            <span class="hidden sm:inline text-[11px]">Suara</span>
+          </button>
+
+          <!-- Help / Instructions Button -->
+          <button onclick="navigateTo('screen-petunjuk')" class="p-2 rounded-lg bg-parchment-200 hover:bg-parchment-300 text-sepiaInk border border-parchment-300 transition-colors flex items-center gap-1 text-xs font-semibold" title="Petunjuk Penggunaan">
+            <span>ℹ️</span>
+            <span class="hidden sm:inline text-[11px]">Panduan</span>
+          </button>
+
+          <!-- Main Menu Button -->
+          <button onclick="navigateTo('screen-menu')" class="px-3 py-1.5 rounded-lg bg-merah-600 hover:bg-merah-700 text-white font-bold text-xs shadow-sm transition-all flex items-center gap-1.5 active:scale-95">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <span>Menu Utama</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER AREA FOR SPA SCREENS -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full relative">
+
+    <!-- ========================================== -->
+    <!-- 1. HALAMAN SAMPUL & LOGIN MURID (Cover)   -->
+    <!-- ========================================== -->
+    <section id="screen-cover" class="screen-view active max-w-4xl mx-auto my-auto pt-4 pb-12">
+      <div class="relative bg-parchment-50 border-2 border-parchment-300 rounded-3xl p-6 sm:p-12 shadow-paper overflow-hidden">
+        
+        <!-- Background Decorative Watermark (Garuda / Merah Putih Ribbon) -->
+        <div class="absolute -top-12 -right-12 w-64 h-64 bg-merah-600/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-amber-600/5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <!-- Vintage Top Header Banner -->
+        <div class="text-center space-y-4 mb-8">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-merah-50 border border-merah-200 text-merah-700 text-xs sm:text-sm font-semibold uppercase tracking-widest shadow-sm">
+            <span class="text-base">🇮🇩</span> Kurikulum Merdeka • Sejarah SMA Fase F / Kelas XI
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-black text-sepiaInk tracking-tight font-title leading-tight">
+            Detik-Detik <span class="text-merah-600 underline decoration-vintageGold decoration-wavy decoration-2">Proklamasi</span>
+            <br>Kemerdekaan Indonesia
+          </h1>
+
+          <p class="text-sepiaMuted text-sm sm:text-base max-w-2xl mx-auto font-display italic">
+            "Jelajah Waktu 1945: Menelusuri rantai peristiwa heroik dari Rengasdengklok hingga berkibarnya Sang Saka Merah Putih di Pegangsaan Timur 56."
+          </p>
+        </div>
+
+        <!-- Student Login Card -->
+        <div class="max-w-md mx-auto bg-parchment-100/90 border border-parchment-300 rounded-2xl p-6 sm:p-8 shadow-vintage backdrop-blur-sm">
+          <div class="flex items-center gap-3 mb-6 border-b border-parchment-300 pb-3">
+            <div class="w-10 h-10 rounded-full bg-amber-100 border border-amber-300 flex items-center justify-center text-xl shadow-inner">
+              ✍️
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-sepiaInk font-title">Daftar Buku Tamu Pejuang</h3>
+              <p class="text-xs text-sepiaMuted">Masukkan identitasmu sebelum memulai misi belajar</p>
+            </div>
+          </div>
+
+          <!-- Form Inputs -->
+          <div class="space-y-4">
+            <div>
+              <label for="student-name-input" class="block text-xs font-bold uppercase tracking-wider text-sepiaInk mb-1.5">
+                Nama Lengkap Murid <span class="text-merah-600">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="student-name-input" 
+                placeholder="Contoh: Raden Kartika Putri" 
+                class="w-full px-4 py-3 rounded-xl bg-parchment-50 border border-parchment-300 focus:border-merah-600 focus:ring-2 focus:ring-merah-200 outline-none text-sepiaInk font-medium transition shadow-inner text-sm placeholder:text-parchment-400"
+                onkeypress="if(event.key==='Enter') submitLogin()"
+              >
+            </div>
+
+            <div>
+              <label for="student-class-input" class="block text-xs font-bold uppercase tracking-wider text-sepiaInk mb-1.5">
+                Kelas / Rombel <span class="text-merah-600">*</span>
+              </label>
+              <select 
+                id="student-class-input" 
+                class="w-full px-4 py-3 rounded-xl bg-parchment-50 border border-parchment-300 focus:border-merah-600 focus:ring-2 focus:ring-merah-200 outline-none text-sepiaInk font-medium transition shadow-inner text-sm"
+              >
+                <option value="">-- Pilih Kelas XI Anda --</option>
+                <option value="XI IPS 1">Kelas XI IPS 1 (Sosial)</option>
+                <option value="XI IPS 2">Kelas XI IPS 2 (Sosial)</option>
+                <option value="XI MIPA 1">Kelas XI MIPA 1 (Sains)</option>
+                <option value="XI MIPA 2">Kelas XI MIPA 2 (Sains)</option>
+                <option value="XI F-1">Kelas XI F-1 (Kurikulum Merdeka)</option>
+                <option value="XI F-2">Kelas XI F-2 (Kurikulum Merdeka)</option>
+                <option value="XI F-3">Kelas XI F-3 (Kurikulum Merdeka)</option>
+              </select>
+            </div>
+
+            <!-- Validation Message Box -->
+            <div id="login-error-msg" class="hidden text-xs text-merah-700 bg-merah-50 border border-merah-200 p-2.5 rounded-lg flex items-center gap-2">
+              <svg class="w-4 h-4 text-merah-600 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+              </svg>
+              <span>Mohon isi Nama Lengkap dan pilih Kelas terlebih dahulu.</span>
+            </div>
+
+            <!-- Submit Button -->
+            <button 
+              type="button" 
+              onclick="submitLogin()" 
+              class="w-full group mt-2 py-3.5 px-6 rounded-xl bg-gradient-to-r from-merah-600 to-merah-700 hover:from-merah-700 hover:to-merah-800 text-white font-bold text-sm tracking-wide shadow-vintage hover:shadow-lg transition-all transform active:scale-98 flex items-center justify-center gap-2 border border-merah-500/40"
+            >
+              <span>Mulai Petualangan Sejarah</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Bottom subtle note -->
+          <div class="mt-6 pt-4 border-t border-parchment-200 flex items-center justify-between text-[11px] text-sepiaMuted">
+            <span>🏛️ Media Pembelajaran Interaktif Mandiri</span>
+            <span class="font-mono text-vintageBrass">Versi 2.0 (1945 Edition)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. HALAMAN MENU UTAMA (Dashboard Navigasi) -->
+    <!-- ========================================== -->
+    <section id="screen-menu" class="screen-view max-w-6xl mx-auto space-y-6">
+      
+      <!-- Welcome Hero Banner -->
+      <div class="bg-gradient-to-r from-parchment-100 via-parchment-50 to-parchment-100 border border-parchment-300 rounded-3xl p-6 sm:p-8 shadow-paper relative overflow-hidden">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold">
+              🎖️ Markas Komando Pembelajaran
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-sepiaInk font-title">
+              Selamat Berjuang, <span id="dash-student-name" class="text-merah-600 underline decoration-amber-400">Siswa Teladan</span>!
+            </h2>
+            <p class="text-sepiaMuted text-sm sm:text-base max-w-2xl font-display italic">
+              "Bangsa yang besar adalah bangsa yang tidak pernah melupakan jasa pahlawannya." — Bung Karno
+            </p>
+          </div>
+
+          <!-- Quick status card -->
+          <div class="bg-parchment-50/90 border border-parchment-300 rounded-2xl p-4 shadow-sm flex items-center gap-4 shrink-0">
+            <div class="w-12 h-12 rounded-xl bg-merah-100 text-merah-700 flex items-center justify-center text-2xl font-bold border border-merah-200">
+              🇮🇩
+            </div>
+            <div class="text-left">
+              <div class="text-[11px] uppercase tracking-wider text-sepiaMuted font-bold">Status Misi</div>
+              <div id="dash-badge-status" class="text-sm font-bold text-vintageBrass font-mono">Tahap Eksplorasi</div>
+              <div class="text-[11px] text-sepiaMuted" id="dash-class-name">Kelas: -</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid 6 Menu Utama -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <!-- Card 1: Petunjuk Penggunaan -->
+        <div onclick="navigateTo('screen-petunjuk')" class="group cursor-pointer bg-parchment-50 hover:bg-parchment-100 border-2 border-parchment-200 hover:border-amber-400 rounded-2xl p-6 shadow-sm hover:shadow-vintage transition-all duration-300 transform hover:-translate-y-1 relative flex flex-col justify-between">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-blue-100 border border-blue-200 text-blue-800 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+              📖
+            </div>
+            <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">Panduan</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-sepiaInk group-hover:text-merah-700 font-title transition-colors mb-1.5">
+              1. Petunjuk Penggunaan
+            </h3>
+            <p class="text-xs text-sepiaMuted leading-relaxed">
+              Panduan interaktif cara memakai tombol, navigasi audio, alur belajar, dan simbol dalam aplikasi.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-parchment-200 flex items-center justify-between text-xs font-bold text-blue-700">
+            <span>Buka Petunjuk</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Tujuan & Apersepsi -->
+        <div onclick="navigateTo('screen-tujuan')" class="group cursor-pointer bg-parchment-50 hover:bg-parchment-100 border-2 border-parchment-200 hover:border-amber-400 rounded-2xl p-6 shadow-sm hover:shadow-vintage transition-all duration-300 transform hover:-translate-y-1 relative flex flex-col justify-between">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 border border-amber-200 text-amber-800 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+              🎯
+            </div>
+            <span id="badge-menu-tujuan" class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">Apersepsi</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-sepiaInk group-hover:text-merah-700 font-title transition-colors mb-1.5">
+              2. Tujuan & Apersepsi
+            </h3>
+            <p class="text-xs text-sepiaMuted leading-relaxed">
+              Pertanyaan pemantik kontrafaktual kritis dan Capaian Pembelajaran (CP/ATP) Kurikulum Merdeka.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-parchment-200 flex items-center justify-between text-xs font-bold text-amber-800">
+            <span>Mulai Apersepsi</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Jelajah Materi (Utama) -->
+        <div onclick="navigateTo('screen-materi')" class="group cursor-pointer bg-gradient-to-br from-parchment-50 to-merah-50/40 hover:from-parchment-100 hover:to-merah-50 border-2 border-merah-200 hover:border-merah-500 rounded-2xl p-6 shadow-sm hover:shadow-vintage transition-all duration-300 transform hover:-translate-y-1 relative flex flex-col justify-between">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-merah-100 border border-merah-300 text-merah-700 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+              📜
+            </div>
+            <span id="badge-menu-materi" class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-merah-100 text-merah-700 border border-merah-300">4 Babak</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-sepiaInk group-hover:text-merah-700 font-title transition-colors mb-1.5">
+              3. Jelajah Materi
+            </h3>
+            <p class="text-xs text-sepiaMuted leading-relaxed">
+              Materi 4 babak: Runtuhnya Jepang, Rengasdengklok, Rumah Maeda, hingga teks diketik dan dibacakan.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-merah-200 flex items-center justify-between text-xs font-bold text-merah-700">
+            <span>Jelajahi 4 Babak</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Aktivitas & Simulasi -->
+        <div onclick="navigateTo('screen-aktivitas')" class="group cursor-pointer bg-parchment-50 hover:bg-parchment-100 border-2 border-parchment-200 hover:border-amber-400 rounded-2xl p-6 shadow-sm hover:shadow-vintage transition-all duration-300 transform hover:-translate-y-1 relative flex flex-col justify-between">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 border border-emerald-200 text-emerald-800 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+              🎮
+            </div>
+            <span id="badge-menu-game" class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">Mini-Game</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-sepiaInk group-hover:text-merah-700 font-title transition-colors mb-1.5">
+              4. Aktivitas & Simulasi
+            </h3>
+            <p class="text-xs text-sepiaMuted leading-relaxed">
+              Tantangan interaktif susun urutan kronologi peristiwa dan menjodohkan tokoh penting dengan perannya.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-parchment-200 flex items-center justify-between text-xs font-bold text-emerald-700">
+            <span>Mainkan Simulasi</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Evaluasi / Kuis HOTS -->
+        <div onclick="navigateTo('screen-evaluasi')" class="group cursor-pointer bg-parchment-50 hover:bg-parchment-100 border-2 border-parchment-200 hover:border-amber-400 rounded-2xl p-6 shadow-sm hover:shadow-vintage transition-all duration-300 transform hover:-translate-y-1 relative flex flex-col justify-between">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-purple-100 border border-purple-200 text-purple-800 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+              📝
+            </div>
+            <span id="badge-menu-kuis" class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200">5 Soal HOTS</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-sepiaInk group-hover:text-merah-700 font-title transition-colors mb-1.5">
+              5. Evaluasi & Sertifikat
+            </h3>
+            <p class="text-xs text-sepiaMuted leading-relaxed">
+              Uji pemahaman historis tingkat tinggi dan peroleh Piagam Sertifikat Digital Sejarawan Muda.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-parchment-200 flex items-center justify-between text-xs font-bold text-purple-700">
+            <span>Mulai Uji Kompetensi</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </div>
+
+        <!-- Card 6: Refleksi & Pengembang -->
+        <div onclick="navigateTo('screen-refleksi')" class="group cursor-pointer bg-parchment-50 hover:bg-parchment-100 border-2 border-parchment-200 hover:border-amber-400 rounded-2xl p-6 shadow-sm hover:shadow-vintage transition-all duration-300 transform hover:-translate-y-1 relative flex flex-col justify-between">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 border border-amber-300 text-amber-800 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+              💡
+            </div>
+            <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200">Penutup</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-sepiaInk group-hover:text-merah-700 font-title transition-colors mb-1.5">
+              6. Refleksi & Pengembang
+            </h3>
+            <p class="text-xs text-sepiaMuted leading-relaxed">
+              Ekspresikan perasaan belajarmu, petik nilai luhur perjuangan, dan simak profil tim pengembang.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-parchment-200 flex items-center justify-between text-xs font-bold text-amber-800">
+            <span>Tuliskan Refleksi</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. HALAMAN PETUNJUK PENGGUNAAN             -->
+    <!-- ========================================== -->
+    <section id="screen-petunjuk" class="screen-view max-w-4xl mx-auto space-y-6">
+      <div class="bg-parchment-50 border-2 border-parchment-300 rounded-3xl p-6 sm:p-10 shadow-paper space-y-6">
+        
+        <div class="border-b border-parchment-300 pb-4 flex items-center justify-between">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-sepiaInk font-title flex items-center gap-2">
+              <span>📖</span> Petunjuk Penggunaan MPI
+            </h2>
+            <p class="text-xs sm:text-sm text-sepiaMuted">Tata cara pengoperasian aplikasi multimedia interaktif</p>
+          </div>
+          <button onclick="navigateTo('screen-menu')" class="px-3 py-1.5 bg-parchment-200 hover:bg-parchment-300 text-sepiaInk rounded-lg text-xs font-bold transition">
+            ✕ Tutup
+          </button>
+        </div>
+
+        <!-- 4 Grid Petunjuk -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <div class="p-4 bg-parchment-100 rounded-xl border border-parchment-300 space-y-2">
+            <div class="flex items-center gap-2 text-sm font-bold text-merah-700">
+              <span class="text-lg">🧭</span> Navigasi Layar
+            </div>
+            <p class="text-xs text-sepiaMuted leading-relaxed">
+              Gunakan tombol <strong>"Sebelumnya"</strong> dan <strong>"Selanjutnya"</strong> di bilah bawah untuk berpindah antar babak. Anda juga bisa kembali ke <strong>"Menu Utama"</strong> kapan saja lewat tombol di kanan atas.
+            </p>
+          </div>
+
+          <div class="p-4 bg-parchment-100 rounded-xl border border-parchment-300 space-y-2">
+            <div class="flex items-center gap-2 text-sm font-bold text-vintageBrass">
+              <span class="text-lg">🔄</span> Kartu Bolak-Balik (Flip Card)
+            </div>
+            <p class="text-xs text-sepiaMuted leading-relaxed">
+              Pada Babak 1, klik kartu <strong>"Golongan Tua"</strong> atau <strong>"Golongan Muda"</strong> untuk membalik kartu dan membaca analisis perbandingan sudut pandang sejarah mereka.
+            </p>
+          </div>
+
+          <div class="p-4 bg-parchment-100 rounded-xl border border-parchment-300 space-y-2">
+            <div class="flex items-center gap-2 text-sm font-bold text-emerald-700">
+              <span class="text-lg">🔍</span> Titik Hotspot & Sorot Kata
+            </div>
+            <p class="text-xs text-sepiaMuted leading-relaxed">
+              Di Babak 3, klik hotspot ruang Maeda dan tombol <strong>"Sorot 3 Perubahan Kata"</strong> untuk membandingkan secara visual teks tulisan tangan Bung Karno vs ketikan Sayuti Melik.
+            </p>
+          </div>
+
+          <div class="p-4 bg-parchment-100 rounded-xl border border-parchment-300 space-y-2">
+            <div class="flex items-center gap-2 text-sm font-bold text-purple-700">
+              <span class="text-lg">🏆</span> Kuis & Piagam Kelulusan
+            </div>
+            <p class="text-xs text-sepiaMuted leading-relaxed">
+              Jawab 5 soal evaluasi HOTS. Jika meraih nilai tuntas, Anda dapat mencetak atau menyimpan <strong>Sertifikat Piagam Sejarawan Muda 1945</strong> berstempel khusus.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="p-4 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 flex items-center gap-3">
+          <span class="text-2xl">💡</span>
+          <div>
+            <strong>Tips Pengguna:</strong> Aplikasi ini telah dioptimalkan untuk layar sentuh (Smartboard/Papan Interaktif Digital), Tablet, maupun Laptop dengan efek suara sintetis tanpa memerlukan unduhan tambahan.
+          </div>
+        </div>
+
+        <div class="flex justify-end pt-2">
+          <button onclick="navigateTo('screen-tujuan')" class="px-5 py-2.5 rounded-xl bg-merah-600 hover:bg-merah-700 text-white font-bold text-xs shadow transition flex items-center gap-2">
+            <span>Lanjut ke Tujuan & Apersepsi</span>
+            <span>→</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. HALAMAN TUJUAN PEMBELAJARAN & APERSEPSI -->
+    <!-- ========================================== -->
+    <section id="screen-tujuan" class="screen-view max-w-5xl mx-auto space-y-6">
+      
+      <!-- Box Apersepsi Interaktif -->
+      <div class="bg-parchment-50 border-2 border-merah-200 rounded-3xl p-6 sm:p-8 shadow-paper space-y-6 relative overflow-hidden">
+        <div class="flex items-center gap-3 border-b border-parchment-300 pb-4">
+          <div class="w-12 h-12 rounded-2xl bg-merah-100 border border-merah-300 text-merah-700 flex items-center justify-center text-2xl shadow-inner">
+            🔥
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-wider font-bold text-merah-700">Apersepsi Pemantik Kritis</div>
+            <h2 class="text-xl sm:text-2xl font-black text-sepiaInk font-title">
+              Apa yang Terjadi Jika Bung Karno Tak Dibawa ke Rengasdengklok?
+            </h2>
+          </div>
+        </div>
+
+        <p class="text-xs sm:text-sm text-sepiaMuted leading-relaxed">
+          Pada tanggal 15 Agustus 1945 malam, pemuda berkumpul di Laboratorium Bakteriologi Jl. Pegangsaan Timur. Sukarni dan Chaerul Saleh bertekad menjauhkan Soekarno dan Hatta ke luar kota. <strong>Pilihlah salah satu skenario berikut menurut hipotesismu:</strong>
+        </p>
+
+        <!-- 3 Pilihan Opini Interaktif -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <button 
+            onclick="selectApersepsi('A')" 
+            class="apersepsi-btn p-4 rounded-2xl border-2 border-parchment-300 hover:border-merah-500 bg-parchment-100 hover:bg-parchment-50 text-left transition-all duration-200 shadow-sm flex flex-col justify-between group active:scale-98"
+          >
+            <div>
+              <span class="inline-block w-7 h-7 rounded-full bg-merah-100 text-merah-800 font-bold text-xs flex items-center justify-center mb-2">A</span>
+              <h4 class="text-sm font-bold text-sepiaInk group-hover:text-merah-700 mb-1">
+                Kemerdekaan Dianggap "Hadiah" Jepang
+              </h4>
+              <p class="text-[11px] text-sepiaMuted">
+                Proklamasi dilakukan lewat sidang PPKI tanggal 18 Agustus sehingga Sekutu menganggap Indonesia boneka buatan Jepang.
+              </p>
+            </div>
+            <span class="mt-3 text-[11px] font-bold text-merah-600">Pilih Hipotesis Ini →</span>
+          </button>
+
+          <button 
+            onclick="selectApersepsi('B')" 
+            class="apersepsi-btn p-4 rounded-2xl border-2 border-parchment-300 hover:border-amber-500 bg-parchment-100 hover:bg-parchment-50 text-left transition-all duration-200 shadow-sm flex flex-col justify-between group active:scale-98"
+          >
+            <div>
+              <span class="inline-block w-7 h-7 rounded-full bg-amber-100 text-amber-800 font-bold text-xs flex items-center justify-center mb-2">B</span>
+              <h4 class="text-sm font-bold text-sepiaInk group-hover:text-amber-800 mb-1">
+                Proklamasi Tertunda Tanpa Batas
+              </h4>
+              <p class="text-[11px] text-sepiaMuted">
+                Soekarno-Hatta memilih menunggu kepastian resmi menyerahnya Kaisar Hirohito lewat jalur radio resmi militer.
+              </p>
+            </div>
+            <span class="mt-3 text-[11px] font-bold text-amber-700">Pilih Hipotesis Ini →</span>
+          </button>
+
+          <button 
+            onclick="selectApersepsi('C')" 
+            class="apersepsi-btn p-4 rounded-2xl border-2 border-parchment-300 hover:border-blue-500 bg-parchment-100 hover:bg-parchment-50 text-left transition-all duration-200 shadow-sm flex flex-col justify-between group active:scale-98"
+          >
+            <div>
+              <span class="inline-block w-7 h-7 rounded-full bg-blue-100 text-blue-800 font-bold text-xs flex items-center justify-center mb-2">C</span>
+              <h4 class="text-sm font-bold text-sepiaInk group-hover:text-blue-700 mb-1">
+                Belanda (NICA) Lebih Mudah Mengklaim
+              </h4>
+              <p class="text-[11px] text-sepiaMuted">
+                Kekosongan kekuasaan (vacuum of power) langsung diisi oleh Sekutu dan Belanda tanpa adanya legalitas kemerdekaan bangsa.
+              </p>
+            </div>
+            <span class="mt-3 text-[11px] font-bold text-blue-700">Pilih Hipotesis Ini →</span>
+          </button>
+        </div>
+
+        <!-- Feedback Box Apersepsi (Muncul saat tombol diklik) -->
+        <div id="apersepsi-feedback" class="hidden p-5 rounded-2xl bg-amber-50/90 border-2 border-vintageGold text-sepiaInk shadow-md space-y-2 animate-fadeIn">
+          <div class="flex items-center gap-2 text-sm font-bold text-vintageBrass">
+            <span>💡</span> Ulasan Historis & Analisis Kritis:
+          </div>
+          <p id="apersepsi-feedback-text" class="text-xs sm:text-sm text-sepiaInk leading-relaxed">
+            <!-- Diisi secara dinamis oleh JS -->
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Box Capaian & Tujuan Pembelajaran (Checklist Visual) -->
+      <div class="bg-parchment-50 border border-parchment-300 rounded-3xl p-6 sm:p-8 shadow-paper space-y-4">
+        <div class="flex items-center justify-between border-b border-parchment-200 pb-3">
+          <h3 class="text-lg font-bold text-sepiaInk font-title flex items-center gap-2">
+            <span>🎯</span> Capaian & Alur Tujuan Pembelajaran (Fase F)
+          </h3>
+          <span class="text-xs font-mono font-semibold px-2.5 py-1 bg-parchment-200 rounded-full text-sepiaMuted">Kurikulum Merdeka</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+          
+          <label class="flex items-start gap-3 p-3 rounded-xl bg-parchment-100 border border-parchment-300 cursor-pointer hover:bg-parchment-200 transition">
+            <input type="checkbox" checked disabled class="mt-0.5 rounded text-merah-600 focus:ring-0">
+            <div>
+              <span class="font-bold text-sepiaInk block">Menganalisis Vacuum of Power (TP 1)</span>
+              <span class="text-sepiaMuted">Memahami dampak pengeboman atomik Jepang dan perdebatan sengit antara Golongan Tua vs Muda.</span>
+            </div>
+          </label>
+
+          <label class="flex items-start gap-3 p-3 rounded-xl bg-parchment-100 border border-parchment-300 cursor-pointer hover:bg-parchment-200 transition">
+            <input type="checkbox" checked disabled class="mt-0.5 rounded text-merah-600 focus:ring-0">
+            <div>
+              <span class="font-bold text-sepiaInk block">Mengevaluasi Peristiwa Rengasdengklok (TP 2)</span>
+              <span class="text-sepiaMuted">Menjelaskan alasan pemilihan Rengasdengklok serta jaminan diplomatis Ahmad Soebardjo.</span>
+            </div>
+          </label>
+
+          <label class="flex items-start gap-3 p-3 rounded-xl bg-parchment-100 border border-parchment-300 cursor-pointer hover:bg-parchment-200 transition">
+            <input type="checkbox" checked disabled class="mt-0.5 rounded text-merah-600 focus:ring-0">
+            <div>
+              <span class="font-bold text-sepiaInk block">Membandingkan Naskah Proklamasi (TP 3)</span>
+              <span class="text-sepiaMuted">Mengidentifikasi 3 perubahan esensial dari naskah tulisan tangan ke naskah ketikan otentik.</span>
+            </div>
+          </label>
+
+          <label class="flex items-start gap-3 p-3 rounded-xl bg-parchment-100 border border-parchment-300 cursor-pointer hover:bg-parchment-200 transition">
+            <input type="checkbox" checked disabled class="mt-0.5 rounded text-merah-600 focus:ring-0">
+            <div>
+              <span class="font-bold text-sepiaInk block">Meneladani Peran Tokoh Kunci (TP 4)</span>
+              <span class="text-sepiaMuted">Mengapresiasi heroisme Fatmawati, Latief Hendraningrat, wartawan IPPHOS, dan penyiar radio.</span>
+            </div>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Action Navigation Buttons -->
+      <div class="flex items-center justify-between pt-2">
+        <button onclick="navigateTo('screen-menu')" class="px-5 py-2.5 rounded-xl bg-parchment-200 hover:bg-parchment-300 text-sepiaInk font-bold text-xs shadow-sm transition">
+          ← Kembali ke Menu
+        </button>
+        <button onclick="navigateTo('screen-materi')" class="px-6 py-2.5 rounded-xl bg-merah-600 hover:bg-merah-700 text-white font-bold text-xs shadow-vintage hover:shadow-lg transition flex items-center gap-2">
+          <span>Lanjut ke Jelajah Materi (Babak 1)</span>
+          <span>→</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. HALAMAN JELAJAH MATERI (4 Tab Kronologi)-->
+    <!-- ========================================== -->
+    <section id="screen-materi" class="screen-view max-w-6xl mx-auto space-y-6">
+      
+      <!-- Tab Header Bar -->
+      <div class="bg-parchment-50 border-2 border-parchment-300 rounded-2xl p-2 shadow-sm flex flex-wrap gap-2 justify-between items-center">
+        
+        <div class="flex flex-wrap gap-1.5 sm:gap-2">
+          <button id="tab-btn-1" onclick="switchMateriTab(1)" class="tab-materi-btn px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-1.5 bg-merah-600 text-white shadow-sm">
+            <span>🇯🇵</span>
+            <span>Babak 1: Runtuhnya Jepang</span>
+          </button>
+          <button id="tab-btn-2" onclick="switchMateriTab(2)" class="tab-materi-btn px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-1.5 bg-parchment-200 hover:bg-parchment-300 text-sepiaInk">
+            <span>🌾</span>
+            <span>Babak 2: Rengasdengklok</span>
+          </button>
+          <button id="tab-btn-3" onclick="switchMateriTab(3)" class="tab-materi-btn px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-1.5 bg-parchment-200 hover:bg-parchment-300 text-sepiaInk">
+            <span>🖋️</span>
+            <span>Babak 3: Rumah Maeda</span>
+          </button>
+          <button id="tab-btn-4" onclick="switchMateriTab(4)" class="tab-materi-btn px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-1.5 bg-parchment-200 hover:bg-parchment-300 text-sepiaInk">
+            <span>🇮🇩</span>
+            <span>Babak 4: Proklamasi 17 Ags</span>
+          </button>
+        </div>
+
+        <div class="hidden sm:block text-xs font-mono text-vintageBrass font-semibold px-2">
+          Kronologi 1945
+        </div>
+
+      </div>
+
+      <!-- TAB CONTENT CONTAINER -->
+      <div class="bg-parchment-50 border-2 border-parchment-300 rounded-3xl p-6 sm:p-10 shadow-paper relative">
+        
+        <!-- ---------------------------------------- -->
+        <!-- TAB 1: KEKALAHAN JEPANG & VACUUM OF POWER -->
+        <!-- ---------------------------------------- -->
+        <div id="materi-tab-1" class="tab-content space-y-6">
+          <div class="border-b border-parchment-300 pb-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-merah-700">6 – 15 Agustus 1945</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-sepiaInk font-title mt-1">
+              Babak 1: Runtuhnya Kekaisaran Jepang & Kekosongan Kekuasaan
+            </h3>
+            <p class="text-xs sm:text-sm text-sepiaMuted mt-1">
+              Dua bom atom Sekutu meluluhlantakkan Hiroshima dan Nagasaki, membuka gerbang emas bagi bangsa Indonesia.
+            </p>
+          </div>
+
+          <!-- Timeline Grid Bom Atom & Gyokuon-hoso -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+            <div class="p-4 rounded-2xl bg-parchment-100 border border-parchment-300 space-y-2">
+              <div class="w-8 h-8 rounded-lg bg-merah-100 text-merah-700 flex items-center justify-center font-bold text-xs">
+                01
+              </div>
+              <h4 class="text-sm font-bold text-sepiaInk">6 Agustus 1945: Hiroshima</h4>
+              <p class="text-xs text-sepiaMuted leading-relaxed">
+                Bom atom uranium <em>"Little Boy"</em> dijatuhkan oleh pesawat B-29 Enola Gay Sekutu di kota Hiroshima, meremukkan pusat logistik militer Jepang.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-parchment-100 border border-parchment-300 space-y-2">
+              <div class="w-8 h-8 rounded-lg bg-merah-100 text-merah-700 flex items-center justify-center font-bold text-xs">
+                02
+              </div>
+              <h4 class="text-sm font-bold text-sepiaInk">9 Agustus 1945: Nagasaki</h4>
+              <p class="text-xs text-sepiaMuted leading-relaxed">
+                Bom atom plutonium <em>"Fat Man"</em> dijatuhkan di Nagasaki. Di hari yang sama, Soekarno, Hatta, dan Radjiman diterbangkan ke Dalat (Vietnam) menemui Marsekal Terauchi.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-parchment-100 border border-parchment-300 space-y-2">
+              <div class="w-8 h-8 rounded-lg bg-merah-100 text-merah-700 flex items-center justify-center font-bold text-xs">
+                03
+              </div>
+              <h4 class="text-sm font-bold text-sepiaInk">15 Agustus 1945: Gyokuon-hoso</h4>
+              <p class="text-xs text-sepiaMuted leading-relaxed">
+                Kaisar Hirohito mengumumkan penyerahan tanpa syarat kepada Sekutu lewat siaran radio. Terjadilah <strong>Vacuum of Power</strong> (kekosongan kekuasaan) di Nusantara.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Interactive 3D Flip Card: Golongan Tua vs Golongan Muda -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center justify-between">
+              <h4 class="text-base font-bold text-sepiaInk font-title flex items-center gap-2">
+                <span>⚡</span> Perbedaan Perspektif Strategis: Golongan Tua vs Muda
+              </h4>
+              <span class="text-[11px] text-vintageBrass font-semibold bg-amber-50 px-2 py-1 rounded border border-amber-200">
+                Klik kartu untuk membalik (Flip) 🔄
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- Card Golongan Tua -->
+              <div class="h-64 cursor-pointer perspective-1000" onclick="toggleFlip(this)">
+                <div class="flip-card-inner">
+                  <!-- Front -->
+                  <div class="flip-card-front p-6 bg-parchment-100 border-2 border-parchment-300 shadow-sm flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between mb-3">
+                        <span class="px-2.5 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">Golongan Tua</span>
+                        <span class="text-xs text-sepiaMuted">Sisi Depan ↺</span>
+                      </div>
+                      <h5 class="text-base font-bold text-sepiaInk mb-1">Ir. Soekarno, Drs. Moh. Hatta, Ahmad Soebardjo</h5>
+                      <p class="text-xs text-sepiaMuted leading-relaxed mt-2">
+                        "Kemerdekaan harus disahkan melalui sidang PPKI (Panitia Persiapan Kemerdekaan Indonesia) tanggal 18 Agustus 1945 agar terorganisir tanpa pertumpahan darah melawan tentara Jepang."
+                      </p>
+                    </div>
+                    <div class="text-[11px] font-bold text-amber-800 flex items-center gap-1">
+                      <span>Klik untuk baca alasan historis mendalam</span>
+                      <span>↻</span>
+                    </div>
+                  </div>
+                  <!-- Back -->
+                  <div class="flip-card-back p-6 bg-amber-900 text-amber-50 shadow-md flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between mb-2">
+                        <span class="px-2 py-0.5 bg-amber-800 text-amber-200 text-xs font-bold rounded">Analisis Sudut Pandang</span>
+                        <span class="text-xs text-amber-300">Sisi Belakang</span>
+                      </div>
+                      <p class="text-xs leading-relaxed text-amber-100">
+                        Golongan tua bukan takut atau pro-Jepang, melainkan bersikap realistis. Kekuatan militer Jepang di Jawa masih utuh dan bersenjata lengkap. Jika proklamasi dipaksakan tanpa konsensus hukum, dikhawatirkan akan memicu pembantaian massal terhadap rakyat jelata.
+                      </p>
+                    </div>
+                    <div class="text-[10px] text-amber-300 italic">
+                      Klik kembali untuk menutup kartu.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card Golongan Muda -->
+              <div class="h-64 cursor-pointer perspective-1000" onclick="toggleFlip(this)">
+                <div class="flip-card-inner">
+                  <!-- Front -->
+                  <div class="flip-card-front p-6 bg-parchment-100 border-2 border-merah-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between mb-3">
+                        <span class="px-2.5 py-1 bg-merah-100 text-merah-800 text-xs font-bold rounded-full">Golongan Muda</span>
+                        <span class="text-xs text-sepiaMuted">Sisi Depan ↺</span>
+                      </div>
+                      <h5 class="text-base font-bold text-sepiaInk mb-1">Chaerul Saleh, Wikana, Sukarni, Darwis</h5>
+                      <p class="text-xs text-sepiaMuted leading-relaxed mt-2">
+                        "Kemerdekaan adalah hak dan tekad rakyat Indonesia sendiri! Kemerdekaan tidak boleh diproklamasikan lewat PPKI karena PPKI adalah bentukan Jepang. Rakyat harus membuktikan revolusi mandiri!"
+                      </p>
+                    </div>
+                    <div class="text-[11px] font-bold text-merah-700 flex items-center gap-1">
+                      <span>Klik untuk baca alasan desakan pemuda</span>
+                      <span>↻</span>
+                    </div>
+                  </div>
+                  <!-- Back -->
+                  <div class="flip-card-back p-6 bg-merah-900 text-white shadow-md flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between mb-2">
+                        <span class="px-2 py-0.5 bg-merah-800 text-merah-200 text-xs font-bold rounded">Analisis Sudut Pandang</span>
+                        <span class="text-xs text-merah-300">Sisi Belakang</span>
+                      </div>
+                      <p class="text-xs leading-relaxed text-red-100">
+                        Sutan Sjahrir dan para pemuda telah mendengar berita menyerahnya Jepang melalui siaran radio BBC gelap. Mereka sadar Sekutu akan segera mendarat untuk menegakkan kembali status quo Hindia Belanda. Bagi pemuda, hitungan jam sangat menentukan nasib kedaulatan bangsa.
+                      </p>
+                    </div>
+                    <div class="text-[10px] text-red-300 italic">
+                      Klik kembali untuk menutup kartu.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------------------------------------- -->
+        <!-- TAB 2: PERISTIWA RENGASDENGKLOK          -->
+        <!-- ---------------------------------------- -->
+        <div id="materi-tab-2" class="tab-content hidden space-y-6">
+          <div class="border-b border-parchment-300 pb-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-merah-700">16 Agustus 1945</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-sepiaInk font-title mt-1">
+              Babak 2: Peristiwa Rengasdengklok & Taruhan Nyawa
+            </h3>
+            <p class="text-xs sm:text-sm text-sepiaMuted mt-1">
+              Mengapa kota kecil di Karawang ini menjadi saksi penentu jalannya sejarah bangsa Indonesia?
+            </p>
+          </div>
+
+          <!-- 3 Interactive Story Steps -->
+          <div class="space-y-4">
+            
+            <!-- Step 1: Penjemputan Subuh -->
+            <div class="p-5 rounded-2xl bg-parchment-100 border border-parchment-300 flex flex-col sm:flex-row gap-4 items-start">
+              <div class="w-12 h-12 rounded-xl bg-amber-100 border border-amber-300 text-amber-800 flex items-center justify-center font-bold text-lg shrink-0">
+                04:00
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-sm sm:text-base font-bold text-sepiaInk">1. Pengamanan Menjelang Fajar di Pegangsaan</h4>
+                <p class="text-xs text-sepiaMuted leading-relaxed">
+                  Pukul 04.00 WIB, para pemuda (Sukarni, Jusuf Kunto, Singgih, dan dr. Muwardi) menjemput Ir. Soekarno, Ibu Fatmawati, Guntur yang masih bayi, serta Drs. Moh. Hatta. Tindakan ini bukanlah penculikan kriminal, melainkan <em>tindakan penyelamatan</em> agar kedua pemimpin tidak dipengaruhi atau diteror oleh Kempeitai (polisi militer Jepang).
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2: Mengapa Rengasdengklok? -->
+            <div class="p-5 rounded-2xl bg-parchment-100 border border-parchment-300 flex flex-col sm:flex-row gap-4 items-start">
+              <div class="w-12 h-12 rounded-xl bg-merah-100 border border-merah-300 text-merah-700 flex items-center justify-center font-bold text-lg shrink-0">
+                📍
+              </div>
+              <div class="space-y-2 flex-1">
+                <h4 class="text-sm sm:text-base font-bold text-sepiaInk">2. Alasan Strategis Pemilihan Rengasdengklok</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                  <div class="p-2.5 bg-parchment-50 rounded-lg border border-parchment-200">
+                    <span class="font-bold text-merah-700 block mb-1">Terpencil & Aman</span>
+                    Terletak sekitar 15 km dari Kedunggedeh, terisolasi dari jalur utama Jakarta-Cirebon sehingga pergerakan pasukan Jepang mudah diawasi.
+                  </div>
+                  <div class="p-2.5 bg-parchment-50 rounded-lg border border-parchment-200">
+                    <span class="font-bold text-merah-700 block mb-1">Garnisun PETA Kuat</span>
+                    Terdapat batalion PETA di bawah pimpinan Chudancho Subeno yang berpihak penuh pada perjuangan para pemuda.
+                  </div>
+                  <div class="p-2.5 bg-parchment-50 rounded-lg border border-parchment-200">
+                    <span class="font-bold text-merah-700 block mb-1">Rumah Djiaw Kie Siong</span>
+                    Ditempatkan di rumah seorang petani Tionghoa sederhana yang jauh dari hiruk pikuk militer Jepang untuk tempat istirahat Soekarno-Hatta.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Diplomasi Ahmad Soebardjo -->
+            <div class="p-5 rounded-2xl bg-amber-50 border-2 border-vintageGold flex flex-col sm:flex-row gap-4 items-start">
+              <div class="w-12 h-12 rounded-xl bg-amber-200 border border-amber-400 text-amber-900 flex items-center justify-center font-bold text-xl shrink-0">
+                ⚖️
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-sm sm:text-base font-bold text-sepiaInk">3. Diplomasi Ahmad Soebardjo: "Taruhan Leher Saya!"</h4>
+                <p class="text-xs text-sepiaInk leading-relaxed">
+                  Mr. Ahmad Soebardjo yang mewakili golongan tua datang ke Rengasdengklok petang hari bersama Jusuf Kunto. Menghadapi kecurigaan komandan PETA Subeno, Soebardjo dengan gagah berani mengucapkan sumpah bersejarah:
+                </p>
+                <blockquote class="text-xs italic text-merah-800 font-display border-l-4 border-merah-600 pl-3 py-1 my-1">
+                  "Saya menjamin dengan taruhan nyawa dan leher saya, bahwa Proklamasi Kemerdekaan Indonesia akan diumumkan esok hari, tanggal 17 Agustus 1945 paling lambat pukul 12.00 WIB!"
+                </blockquote>
+                <p class="text-xs text-sepiaMuted">
+                  Jaminan ini meluluhkan hati para pemuda, sehingga Soekarno-Hatta malam itu juga diizinkan kembali ke Jakarta.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ---------------------------------------- -->
+        <!-- TAB 3: MALAM PERUMUSAN RUMAH MAEDA       -->
+        <!-- ---------------------------------------- -->
+        <div id="materi-tab-3" class="tab-content hidden space-y-6">
+          <div class="border-b border-parchment-300 pb-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-merah-700">16 – 17 Agustus 1945 Dini Hari</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-sepiaInk font-title mt-1">
+              Babak 3: Malam Perumusan di Rumah Laksamana Maeda
+            </h3>
+            <p class="text-xs sm:text-sm text-sepiaMuted mt-1">
+              Eksplorasi ruang perumusan teks dan perbedaan visual naskah konsep tulisan tangan vs ketikan otentik.
+            </p>
+          </div>
+
+          <!-- Hotspot Eksplorasi Rumah Maeda -->
+          <div class="space-y-3">
+            <h4 class="text-sm sm:text-base font-bold text-sepiaInk font-title flex items-center gap-2">
+              <span>🏛️</span> Eksplorasi Tokoh Perumus di Jl. Imam Bonjol No. 1
+            </h4>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              
+              <div class="p-4 rounded-2xl bg-parchment-100 border border-parchment-300 hover:border-merah-500 transition shadow-sm space-y-2">
+                <div class="flex items-center gap-2 font-bold text-sm text-merah-700">
+                  <span class="w-6 h-6 rounded-full bg-merah-200 flex items-center justify-center text-xs">1</span>
+                  Ir. Soekarno
+                </div>
+                <p class="text-xs text-sepiaMuted leading-relaxed">
+                  <strong>Peran:</strong> Penulis naskah konsep di atas kertas bergaris dengan pensil di ruang makan. Menjadi pemimpin musyawarah di hadapan 29 tokoh yang hadir.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-parchment-100 border border-parchment-300 hover:border-amber-500 transition shadow-sm space-y-2">
+                <div class="flex items-center gap-2 font-bold text-sm text-vintageBrass">
+                  <span class="w-6 h-6 rounded-full bg-amber-200 flex items-center justify-center text-xs">2</span>
+                  Mr. Ahmad Soebardjo
+                </div>
+                <p class="text-xs text-sepiaMuted leading-relaxed">
+                  <strong>Peran:</strong> Menyumbangkan <em>kalimat pertama</em>: <span class="italic text-sepiaInk">"Kami bangsa Indonesia dengan ini menjatakan kemerdekaan Indonesia"</span> (diambil dari piagam Jakarta/gagasan kemerdekaan).
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-parchment-100 border border-parchment-300 hover:border-blue-500 transition shadow-sm space-y-2">
+                <div class="flex items-center gap-2 font-bold text-sm text-blue-700">
+                  <span class="w-6 h-6 rounded-full bg-blue-200 flex items-center justify-center text-xs">3</span>
+                  Drs. Moh. Hatta
+                </div>
+                <p class="text-xs text-sepiaMuted leading-relaxed">
+                  <strong>Peran:</strong> Menyumbangkan <em>kalimat kedua</em> tentang transfer kekuasaan: <span class="italic text-sepiaInk">"Hal-hal jang mengenai pemindahan kekoeasaan d.l.l., diselenggarakan dengan tjara saksama..."</span>
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- FITUR PERBANDINGAN VISUAL TEKS PROKLAMASI -->
+          <div class="space-y-4 pt-4 border-t border-parchment-300">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div>
+                <h4 class="text-base sm:text-lg font-black text-sepiaInk font-title flex items-center gap-2">
+                  <span>📜</span> Perbandingan Naskah: Konsep vs Otentik
+                </h4>
+                <p class="text-xs text-sepiaMuted">Perhatikan 3 perubahan yang dilakukan oleh Sayuti Melik saat mengetik</p>
+              </div>
+              <button 
+                id="btn-highlight-diff"
+                onclick="toggleNaskahHighlight()" 
+                class="px-4 py-2 rounded-xl bg-vintageBrass hover:bg-amber-700 text-white font-bold text-xs shadow transition flex items-center gap-2 active:scale-95"
+              >
+                <span>🔍</span>
+                <span id="btn-highlight-label">Sorot 3 Perubahan Kata</span>
+              </button>
+            </div>
+
+            <!-- Two Column Comparison -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- Kolom 1: Naskah Klad (Tulisan Tangan Soekarno) -->
+              <div class="p-6 rounded-2xl bg-[#faf6ed] border-2 border-parchment-300 shadow-inner space-y-4 font-typewriter relative">
+                <div class="flex items-center justify-between border-b border-parchment-300 pb-2 text-xs">
+                  <span class="font-bold text-sepiaMuted tracking-wider uppercase font-sans">Naskah Klad (Konsep)</span>
+                  <span class="text-[10px] bg-parchment-200 px-2 py-0.5 rounded text-sepiaMuted font-sans">Tulisan Tangan Bung Karno</span>
+                </div>
+
+                <div class="text-center font-bold text-base text-sepiaInk">
+                  PROKLAMASI
+                </div>
+
+                <p class="text-xs leading-relaxed text-sepiaInk">
+                  Kami bangsa Indonesia dengan ini menjatakan kemerdekaan Indonesia.
+                </p>
+
+                <p class="text-xs leading-relaxed text-sepiaInk">
+                  Hal2 jang mengenai pemindahan kekoeasaan d.l.l., diselenggarakan dengan tjara saksama dan dalam 
+                  <span id="diff-klad-1" class="px-1 transition-colors rounded">tempoh</span> 
+                  jang sesingkat-singkatnja.
+                </p>
+
+                <div class="pt-4 text-right text-xs space-y-1 text-sepiaInk">
+                  <div>
+                    <span id="diff-klad-3" class="px-1 transition-colors rounded">Djakarta, 17 - 08 - '05</span>
+                  </div>
+                  <div>
+                    <span id="diff-klad-2" class="px-1 transition-colors rounded">wakil2 bangsa Indonesia</span>
+                  </div>
+                </div>
+
+                <div class="text-[10px] text-sepiaMuted italic pt-2 font-sans border-t border-parchment-200">
+                  *Naskah ini sempat dibuang ke keranjang sampah, namun diselamatkan dan disimpan oleh wartawan <strong>B.M. Diah</strong>.
+                </div>
+              </div>
+
+              <!-- Kolom 2: Naskah Otentik (Ketik Sayuti Melik) -->
+              <div class="p-6 rounded-2xl bg-[#fcfbf9] border-2 border-merah-300 shadow-vintage space-y-4 font-typewriter relative">
+                <div class="flex items-center justify-between border-b border-merah-200 pb-2 text-xs">
+                  <span class="font-bold text-merah-700 tracking-wider uppercase font-sans">Naskah Otentik (Resmi)</span>
+                  <span class="text-[10px] bg-merah-100 text-merah-800 px-2 py-0.5 rounded font-sans">Ketik Sayuti Melik</span>
+                </div>
+
+                <div class="text-center font-bold text-base text-merah-900 tracking-widest">
+                  P R O K L A M A S I
+                </div>
+
+                <p class="text-xs leading-relaxed text-sepiaInk">
+                  Kami bangsa Indonesia dengan ini menjatakan kemerdekaan Indonesia.
+                </p>
+
+                <p class="text-xs leading-relaxed text-sepiaInk">
+                  Hal-hal jang mengenai pemindahan kekoeasaan d.l.l., diselenggarakan dengan tjara saksama dan dalam 
+                  <span id="diff-otentik-1" class="px-1 transition-colors rounded font-bold">tempo</span> 
+                  jang sesingkat-singkatnja.
+                </p>
+
+                <div class="pt-4 text-right text-xs space-y-1 text-sepiaInk">
+                  <div>
+                    <span id="diff-otentik-3" class="px-1 transition-colors rounded font-bold">Djakarta, hari 17 boelan 8 tahoen 05</span>
+                  </div>
+                  <div>
+                    <span id="diff-otentik-2" class="px-1 transition-colors rounded font-bold">Atas nama bangsa Indonesia</span>
+                  </div>
+                  <div class="font-bold text-merah-800 pt-2 font-display italic">
+                    Soekarno - Hatta
+                  </div>
+                </div>
+
+                <div class="text-[10px] text-sepiaMuted italic pt-2 font-sans border-t border-parchment-200">
+                  *Ditandatangani oleh Soekarno dan Hatta atas nama bangsa Indonesia (atas usulan Sukarni).
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Detail 3 Perubahan Accordion/Box -->
+            <div id="diff-explanation-box" class="p-4 rounded-xl bg-amber-50 border border-amber-300 text-xs text-sepiaInk space-y-1.5">
+              <div class="font-bold text-vintageBrass flex items-center gap-1.5">
+                <span>📌</span> Penjelasan 3 Perubahan Kata oleh Sayuti Melik:
+              </div>
+              <ul class="list-disc list-inside space-y-1 text-sepiaMuted pl-2">
+                <li><strong>Kata "tempoh" diubah menjadi "tempo"</strong>: Penyesuaian ejaan bahasa Indonesia yang lebih baku dan tegas.</li>
+                <li><strong>"wakil2 bangsa Indonesia" diganti "Atas nama bangsa Indonesia"</strong>: Menghindari kecemburuan siapa saja wakil yang berhak tanda tangan, sekaligus menegaskan kedaulatan utuh seluruh rakyat.</li>
+                <li><strong>"17-08-'05" diubah menjadi "hari 17 boelan 8 tahoen 05"</strong>: Angka '05 merujuk pada tahun <strong>2605 Kalender Kekaisaran Jepang (Koki/Showa)</strong> yang berlaku resmi pada masa itu.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ---------------------------------------- -->
+        <!-- TAB 4: DETIK-DETIK PROKLAMASI & PENYEBARAN-->
+        <!-- ---------------------------------------- -->
+        <div id="materi-tab-4" class="tab-content hidden space-y-6">
+          <div class="border-b border-parchment-300 pb-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-merah-700">Jumat Legi, 17 Agustus 1945</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-sepiaInk font-title mt-1">
+              Babak 4: Detik-Detik Pembacaan di Pegangsaan Timur 56
+            </h3>
+            <p class="text-xs sm:text-sm text-sepiaMuted mt-1">
+              Pukul 10.00 WIB di halaman rumah Bung Karno, bendera Merah Putih pertama berkibar diiringi lagu Indonesia Raya.
+            </p>
+          </div>
+
+          <!-- Rekaman & Simulasi Suara Proklamasi -->
+          <div class="p-5 rounded-2xl bg-gradient-to-r from-merah-900 to-amber-950 text-white shadow-vintage space-y-3">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-2xl">
+                  🎙️
+                </div>
+                <div>
+                  <h4 class="text-base font-bold font-title">Simulasi Suara Pembacaan Naskah</h4>
+                  <p class="text-xs text-amber-200">Pidato Bung Karno & teks Proklamasi yang menggetarkan dunia</p>
+                </div>
+              </div>
+              <button 
+                id="btn-play-proklamasi"
+                onclick="playProklamasiAudio()" 
+                class="px-5 py-2.5 rounded-xl bg-vintageGold hover:bg-amber-500 text-sepiaInk font-black text-xs shadow transition flex items-center gap-2 active:scale-95"
+              >
+                <span id="btn-audio-icon">▶️</span>
+                <span id="btn-audio-label">Dengarkan Suasana (Simulasi Sintetis)</span>
+              </button>
+            </div>
+
+            <div class="bg-black/30 p-3 rounded-xl border border-white/10 text-xs font-mono leading-relaxed text-amber-100">
+              <p class="italic text-gray-300">"Saudara-saudara sekalian! Saja telah meminta Anda hadir di sini, untuk menjaksikan satu peristiwa mahapenting dalam sedjarah kita..."</p>
+            </div>
+          </div>
+
+          <!-- Galeri Tokoh Kunci (Modal Clickable Cards) -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-base font-bold text-sepiaInk font-title flex items-center gap-2">
+                <span>👥</span> Galeri Tokoh Heroik di Balik Layar
+              </h4>
+              <span class="text-[11px] text-sepiaMuted">Klik kartu tokoh untuk membaca kisah lengkapnya</span>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              
+              <!-- Tokoh 1: Latief Hendraningrat -->
+              <div onclick="showTokohModal('latief')" class="cursor-pointer p-3 rounded-2xl bg-parchment-100 border border-parchment-300 hover:border-merah-500 hover:bg-parchment-200 transition text-center space-y-2 group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-merah-100 border border-merah-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                  🎖️
+                </div>
+                <div>
+                  <h5 class="text-xs font-bold text-sepiaInk">Latief Hendraningrat</h5>
+                  <p class="text-[10px] text-sepiaMuted">Pengibar Bendera</p>
+                </div>
+              </div>
+
+              <!-- Tokoh 2: S. Suhud -->
+              <div onclick="showTokohModal('suhud')" class="cursor-pointer p-3 rounded-2xl bg-parchment-100 border border-parchment-300 hover:border-merah-500 hover:bg-parchment-200 transition text-center space-y-2 group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-amber-100 border border-amber-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                  🎋
+                </div>
+                <div>
+                  <h5 class="text-xs font-bold text-sepiaInk">S. Suhud</h5>
+                  <p class="text-[10px] text-sepiaMuted">Pendamping Pengibar</p>
+                </div>
+              </div>
+
+              <!-- Tokoh 3: Ibu Fatmawati -->
+              <div onclick="showTokohModal('fatmawati')" class="cursor-pointer p-3 rounded-2xl bg-parchment-100 border border-parchment-300 hover:border-merah-500 hover:bg-parchment-200 transition text-center space-y-2 group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-red-100 border border-red-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                  🧵
+                </div>
+                <div>
+                  <h5 class="text-xs font-bold text-sepiaInk">Ibu Fatmawati</h5>
+                  <p class="text-[10px] text-sepiaMuted">Penjahit Sang Saka</p>
+                </div>
+              </div>
+
+              <!-- Tokoh 4: Frans & Alex Mendur -->
+              <div onclick="showTokohModal('mendur')" class="cursor-pointer p-3 rounded-2xl bg-parchment-100 border border-parchment-300 hover:border-merah-500 hover:bg-parchment-200 transition text-center space-y-2 group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-blue-100 border border-blue-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                  📷
+                </div>
+                <div>
+                  <h5 class="text-xs font-bold text-sepiaInk">Frans & Alex Mendur</h5>
+                  <p class="text-[10px] text-sepiaMuted">Fotografer Bersejarah</p>
+                </div>
+              </div>
+
+              <!-- Tokoh 5: B.M. Diah -->
+              <div onclick="showTokohModal('bmdiah')" class="cursor-pointer p-3 rounded-2xl bg-parchment-100 border border-parchment-300 hover:border-merah-500 hover:bg-parchment-200 transition text-center space-y-2 group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-purple-100 border border-purple-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                  📰
+                </div>
+                <div>
+                  <h5 class="text-xs font-bold text-sepiaInk">B.M. Diah</h5>
+                  <p class="text-[10px] text-sepiaMuted">Wartawan Penyelamat</p>
+                </div>
+              </div>
+
+              <!-- Tokoh 6: Jusuf Ronodipuro -->
+              <div onclick="showTokohModal('ronodipuro')" class="cursor-pointer p-3 rounded-2xl bg-parchment-100 border border-parchment-300 hover:border-merah-500 hover:bg-parchment-200 transition text-center space-y-2 group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-emerald-100 border border-emerald-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                  📻
+                </div>
+                <div>
+                  <h5 class="text-xs font-bold text-sepiaInk">Jusuf Ronodipuro</h5>
+                  <p class="text-[10px] text-sepiaMuted">Penyiar Radio Domei</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom Summary Card -->
+          <div class="p-4 rounded-xl bg-parchment-100 border border-parchment-300 text-xs text-sepiaMuted flex items-center gap-3">
+            <span class="text-xl">💡</span>
+            <div>
+              <strong>Mengapa tidak di Lapangan Ikada?</strong> Awalnya direncanakan di Lapangan Ikada (Monas), namun dibatalkan Soekarno untuk menghindari bentrokan fisik berdarah karena tentara Jepang telah mengepung lapangan dengan senapan mesin dan panser.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Step Navigation (Prev / Next) -->
+      <div class="flex items-center justify-between pt-2">
+        <button id="btn-materi-prev" onclick="prevMateriTab()" class="px-5 py-2.5 rounded-xl bg-parchment-200 hover:bg-parchment-300 text-sepiaInk font-bold text-xs shadow-sm transition flex items-center gap-1.5 opacity-50 cursor-not-allowed" disabled>
+          <span>←</span>
+          <span>Babak Sebelumnya</span>
+        </button>
+
+        <button onclick="navigateTo('screen-menu')" class="px-4 py-2 rounded-lg text-xs font-semibold text-sepiaMuted hover:text-sepiaInk transition">
+          Kembali ke Menu
+        </button>
+
+        <button id="btn-materi-next" onclick="nextMateriTab()" class="px-6 py-2.5 rounded-xl bg-merah-600 hover:bg-merah-700 text-white font-bold text-xs shadow-vintage transition flex items-center gap-1.5">
+          <span>Babak Selanjutnya</span>
+          <span>→</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. HALAMAN AKTIVITAS & SIMULASI (Mini-Game) -->
+    <!-- ========================================== -->
+    <section id="screen-aktivitas" class="screen-view max-w-5xl mx-auto space-y-6">
+      
+      <!-- Top Title -->
+      <div class="bg-parchment-50 border-2 border-parchment-300 rounded-3xl p-6 sm:p-8 shadow-paper space-y-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-parchment-300 pb-4">
+          <div>
+            <div class="text-[11px] uppercase tracking-wider font-bold text-emerald-700">LKPD Digital Interaktif</div>
+            <h2 class="text-2xl sm:text-3xl font-black text-sepiaInk font-title">
+              Simulasi & Tantangan Kronologi 1945
+            </h2>
+            <p class="text-xs sm:text-sm text-sepiaMuted">
+              Buktikan kecakapan analisismu dengan menyelesaikan 2 tantangan interaktif di bawah ini!
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="game-tab-btn-1" onclick="switchGameMode(1)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-700 text-white shadow-sm">
+              Tantangan 1: Urutkan Waktu
+            </button>
+            <button id="game-tab-btn-2" onclick="switchGameMode(2)" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-parchment-200 text-sepiaInk hover:bg-parchment-300">
+              Tantangan 2: Jodohkan Tokoh
+            </button>
+          </div>
+        </div>
+
+        <!-- TANTANGAN 1: SUSUN KRONOLOGI PERISTIWA (5 Item) -->
+        <div id="game-mode-1" class="space-y-4">
+          <div class="flex items-center justify-between">
+            <p class="text-xs text-sepiaMuted">
+              Gunakan tombol panah <strong>▲ Naik</strong> dan <strong>▼ Turun</strong> untuk mengurutkan 5 peristiwa dari yang terjadi paling awal hingga akhir:
+            </p>
+            <button onclick="resetChronologyGame()" class="text-xs text-merah-700 hover:underline font-bold">
+              Acak Ulang ↺
+            </button>
+          </div>
+
+          <!-- Chronology List Container -->
+          <div id="chronology-list" class="space-y-2.5">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Verification Button & Result -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-parchment-200">
+            <button 
+              onclick="checkChronologyAnswer()" 
+              class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 active:scale-95"
+            >
+              <span>✅</span>
+              <span>Periksa Urutan Kronologi</span>
+            </button>
+            <div id="chronology-feedback" class="text-xs font-bold"></div>
+          </div>
+        </div>
+
+        <!-- TANTANGAN 2: JODOHKAN TOKOH DENGAN PERAN -->
+        <div id="game-mode-2" class="hidden space-y-4">
+          <p class="text-xs text-sepiaMuted">
+            Pilihlah pasangan nama tokoh perjuangan di sebelah kiri dengan jasa heroiknya di sebelah kanan:
+          </p>
+
+          <div id="matching-game-container" class="space-y-3">
+            <!-- Rendered by JS with interactive select dropdowns/matches -->
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-parchment-200">
+            <button 
+              onclick="checkMatchingAnswer()" 
+              class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 active:scale-95"
+            >
+              <span>✅</span>
+              <span>Periksa Kecocokan Tokoh</span>
+            </button>
+            <div id="matching-feedback" class="text-xs font-bold"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Navigation Buttons -->
+      <div class="flex items-center justify-between pt-2">
+        <button onclick="navigateTo('screen-materi')" class="px-5 py-2.5 rounded-xl bg-parchment-200 hover:bg-parchment-300 text-sepiaInk font-bold text-xs shadow-sm transition">
+          ← Kembali ke Materi
+        </button>
+        <button onclick="navigateTo('screen-evaluasi')" class="px-6 py-2.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-bold text-xs shadow-vintage hover:shadow-lg transition flex items-center gap-2">
+          <span>Lanjut ke Kuis Evaluasi HOTS</span>
+          <span>→</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. HALAMAN EVALUASI & SERTIFIKAT DIGITAL   -->
+    <!-- ========================================== -->
+    <section id="screen-evaluasi" class="screen-view max-w-4xl mx-auto space-y-6">
+      
+      <!-- QUIZ QUESTION CONTAINER (When quiz is active) -->
+      <div id="quiz-question-box" class="bg-parchment-50 border-2 border-parchment-300 rounded-3xl p-6 sm:p-10 shadow-paper space-y-6">
+        
+        <!-- Header Quiz -->
+        <div class="flex items-center justify-between border-b border-parchment-300 pb-4">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-purple-700">Evaluasi Pemahaman HOTS</span>
+            <h2 class="text-xl sm:text-2xl font-black text-sepiaInk font-title mt-0.5">
+              Soal Evaluasi <span id="quiz-num-display" class="text-merah-600">1</span> dari 5
+            </h2>
+          </div>
+          <div class="text-right">
+            <span class="text-xs font-mono font-semibold text-sepiaMuted">Skor Sementara:</span>
+            <div id="quiz-current-score" class="text-sm font-mono font-bold text-vintageBrass">0 Poin</div>
+          </div>
+        </div>
+
+        <!-- Question Text -->
+        <div class="space-y-2">
+          <div class="inline-block px-2.5 py-1 rounded bg-purple-100 text-purple-800 text-[11px] font-bold">
+            Indikator: Analisis Kritis Peristiwa
+          </div>
+          <p id="quiz-question-text" class="text-sm sm:text-base font-semibold text-sepiaInk leading-relaxed">
+            <!-- Text soal dimuat JS -->
+          </p>
+        </div>
+
+        <!-- Options Container -->
+        <div id="quiz-options-container" class="space-y-3">
+          <!-- Opsi A, B, C, D dimuat JS -->
+        </div>
+
+        <!-- Bottom Feedback per Question -->
+        <div id="quiz-feedback-box" class="hidden p-4 rounded-xl border text-xs leading-relaxed">
+          <!-- Penjelasan jawaban -->
+        </div>
+
+        <!-- Next / Submit Button -->
+        <div class="flex items-center justify-between pt-4 border-t border-parchment-200">
+          <div class="text-xs text-sepiaMuted italic">
+            *Pilih salah satu opsi jawaban yang paling tepat.
+          </div>
+          <button 
+            id="btn-quiz-next" 
+            onclick="submitQuizAnswer()" 
+            class="px-6 py-2.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-bold text-xs shadow-vintage transition flex items-center gap-2"
+          >
+            <span>Kunci Jawaban</span>
+            <span>→</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- QUIZ RESULT & CERTIFICATE VIEW (Shown after Quiz finished) -->
+      <div id="quiz-result-view" class="hidden space-y-6">
+        
+        <!-- PRINTABLE OFFICIAL CERTIFICATE -->
+        <div id="certificate-printable" class="bg-[#fcfaf4] border-8 border-double border-[#85531d] rounded-3xl p-6 sm:p-12 shadow-vintage relative overflow-hidden text-center space-y-6">
+          
+          <!-- Vintage Decorative Corner Borders -->
+          <div class="absolute top-2 left-2 text-[#85531d] text-2xl font-serif">❧</div>
+          <div class="absolute top-2 right-2 text-[#85531d] text-2xl font-serif">☙</div>
+          <div class="absolute bottom-2 left-2 text-[#85531d] text-2xl font-serif">❧</div>
+          <div class="absolute bottom-2 right-2 text-[#85531d] text-2xl font-serif">☙</div>
+
+          <!-- Certificate Header -->
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-merah-50 border border-merah-200 text-merah-700 text-xs font-bold uppercase tracking-widest">
+              🇮🇩 REPUBLIK INDONESIA • 17 AGUSTUS 1945 🇮🇩
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-black text-sepiaInk font-title tracking-wider">
+              PIAGAM PENGHARGAAN SEJARAWAN MUDA
+            </h2>
+            <p class="text-xs sm:text-sm text-sepiaMuted italic font-display">
+              Nomor Sertifikat Kehormatan: MPI-PROKLAMASI/XI-SMA/<span id="cert-code">1945-817</span>
+            </p>
+          </div>
+
+          <div class="text-xs uppercase tracking-widest text-sepiaMuted">
+            Diberikan sebagai bukti kelulusan uji kompetensi kepada:
+          </div>
+
+          <!-- Student Name & Class -->
+          <div class="space-y-1">
+            <h3 id="cert-student-name" class="text-2xl sm:text-3xl font-black text-merah-700 font-display underline decoration-vintageGold decoration-2">
+              Nama Siswa Teladan
+            </h3>
+            <p id="cert-student-class" class="text-sm font-semibold text-sepiaInk font-mono">
+              Kelas XI SMA
+            </p>
+          </div>
+
+          <p class="text-xs sm:text-sm text-sepiaMuted max-w-xl mx-auto leading-relaxed">
+            Telah berhasil menyelesaikan seluruh rangkaian penelusuran sejarah, aktivitas simulasi, serta evaluasi HOTS materi 
+            <strong>"Detik-Detik Proklamasi Kemerdekaan Indonesia"</strong> dengan hasil:
+          </p>
+
+          <!-- Score & Grade Badge -->
+          <div class="flex items-center justify-center gap-6 my-4">
+            <div class="bg-parchment-100 border-2 border-vintageGold px-6 py-3 rounded-2xl shadow-inner">
+              <span class="text-[11px] uppercase tracking-wider text-sepiaMuted font-bold block">Skor Akhir</span>
+              <span id="cert-final-score" class="text-3xl sm:text-4xl font-black text-merah-700 font-mono">100</span>
+              <span class="text-xs text-sepiaMuted font-mono">/ 100</span>
+            </div>
+            
+            <div class="bg-parchment-100 border-2 border-vintageGold px-6 py-3 rounded-2xl shadow-inner">
+              <span class="text-[11px] uppercase tracking-wider text-sepiaMuted font-bold block">Predikat Motivasi</span>
+              <span id="cert-predicate" class="text-base sm:text-lg font-black text-vintageBrass font-title block">Sejarawan Paripurna</span>
+            </div>
+          </div>
+
+          <!-- Stamp & Signatures -->
+          <div class="flex items-center justify-between pt-6 border-t-2 border-parchment-300 max-w-lg mx-auto">
+            
+            <div class="text-center">
+              <div class="text-[10px] text-sepiaMuted">Jakarta, 17 Agustus 1945 / 2026</div>
+              <div class="font-display italic font-bold text-sepiaInk text-xs mt-4">Panitia Proklamasi 1945</div>
+              <div class="text-[10px] text-sepiaMuted">Fasilitator Sejarah SMA</div>
+            </div>
+
+            <!-- Red Official Stamp -->
+            <div class="stamp-badge px-3 py-1.5 rounded-lg border-2 border-merah-700 text-merah-700 text-[11px] font-black uppercase tracking-wider text-center">
+              <div>MERDEKA</div>
+              <div class="text-[9px]">LULUS TERVERIFIKASI</div>
+            </div>
+
+            <div class="text-center">
+              <div class="text-[10px] text-sepiaMuted">Mengetahui,</div>
+              <div class="font-display italic font-bold text-merah-700 text-xs mt-4">Bung Karno & Hatta</div>
+              <div class="text-[10px] text-sepiaMuted">Dwi Tunggal Bangsa</div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Action Buttons Below Certificate -->
+        <div class="flex flex-wrap items-center justify-center gap-3 no-print">
+          <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-bold text-xs shadow-md transition flex items-center gap-2">
+            <span>🖨️</span>
+            <span>Cetak / Simpan Piagam (PDF)</span>
+          </button>
+          
+          <button onclick="toggleQuizReview()" class="px-5 py-2.5 rounded-xl bg-parchment-200 hover:bg-parchment-300 text-sepiaInk font-bold text-xs shadow-sm transition flex items-center gap-2">
+            <span>📋</span>
+            <span>Buka Pembahasan Soal</span>
+          </button>
+
+          <button onclick="restartQuiz()" class="px-5 py-2.5 rounded-xl bg-merah-600 hover:bg-merah-700 text-white font-bold text-xs shadow-sm transition flex items-center gap-2">
+            <span>↺</span>
+            <span>Ulangi Kuis</span>
+          </button>
+
+          <button onclick="navigateTo('screen-refleksi')" class="px-5 py-2.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-bold text-xs shadow-sm transition flex items-center gap-2">
+            <span>Refleksi & Selesai →</span>
+          </button>
+        </div>
+
+        <!-- Accordion Pembahasan Soal -->
+        <div id="quiz-review-section" class="hidden bg-parchment-50 border border-parchment-300 rounded-3xl p-6 shadow-paper space-y-4 no-print">
+          <h3 class="text-lg font-bold text-sepiaInk font-title flex items-center gap-2">
+            <span>📋</span> Pembahasan Lengkap 5 Soal Evaluasi
+          </h3>
+          <div id="quiz-review-container" class="space-y-4">
+            <!-- Diisi JS -->
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 8. HALAMAN REFLEKSI & PROFIL PENGEMBANG    -->
+    <!-- ========================================== -->
+    <section id="screen-refleksi" class="screen-view max-w-4xl mx-auto space-y-6">
+      
+      <!-- Box Refleksi Emosional Murid -->
+      <div class="bg-parchment-50 border-2 border-parchment-300 rounded-3xl p-6 sm:p-10 shadow-paper space-y-6">
+        <div class="border-b border-parchment-300 pb-4">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800">Refleksi Diri & Nilai Karakter</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-sepiaInk font-title mt-0.5">
+            Refleksi Perjalanan Sejarah
+          </h2>
+          <p class="text-xs sm:text-sm text-sepiaMuted mt-1">
+            Sejarah bukan sekadar hafalan tanggal, melainkan kompas moral bagi generasi penerus bangsa.
+          </p>
+        </div>
+
+        <!-- 1. Emoji Picker Perasaan Belajar -->
+        <div class="space-y-2">
+          <label class="block text-xs font-bold uppercase tracking-wider text-sepiaInk">
+            1. Bagaimana perasaanmu setelah mempelajari perjuangan Proklamasi ini?
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <button onclick="selectEmojiFeel(this, 'Bangga & Haru')" class="emoji-btn p-3 rounded-xl border border-parchment-300 hover:border-merah-500 bg-parchment-100 hover:bg-parchment-50 text-center transition flex flex-col items-center gap-1 active:scale-95">
+              <span class="text-2xl">🇮🇩</span>
+              <span class="text-xs font-bold text-sepiaInk">Sangat Bangga</span>
+            </button>
+            <button onclick="selectEmojiFeel(this, 'Terinspirasi Berjuang')" class="emoji-btn p-3 rounded-xl border border-parchment-300 hover:border-amber-500 bg-parchment-100 hover:bg-parchment-50 text-center transition flex flex-col items-center gap-1 active:scale-95">
+              <span class="text-2xl">💡</span>
+              <span class="text-xs font-bold text-sepiaInk">Terinspirasi</span>
+            </button>
+            <button onclick="selectEmojiFeel(this, 'Kritis & Tertantang')" class="emoji-btn p-3 rounded-xl border border-parchment-300 hover:border-blue-500 bg-parchment-100 hover:bg-parchment-50 text-center transition flex flex-col items-center gap-1 active:scale-95">
+              <span class="text-2xl">🔍</span>
+              <span class="text-xs font-bold text-sepiaInk">Ingin Tahu Lebih</span>
+            </button>
+            <button onclick="selectEmojiFeel(this, 'Siap Mengisi Kemerdekaan')" class="emoji-btn p-3 rounded-xl border border-parchment-300 hover:border-emerald-500 bg-parchment-100 hover:bg-parchment-50 text-center transition flex flex-col items-center gap-1 active:scale-95">
+              <span class="text-2xl">✊</span>
+              <span class="text-xs font-bold text-sepiaInk">Semangat Juang</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Textarea Nilai Perjuangan -->
+        <div class="space-y-2">
+          <label for="reflection-text-input" class="block text-xs font-bold uppercase tracking-wider text-sepiaInk">
+            2. Nilai perjuangan apa (musyawarah, keberanian pemuda, ketenangan pemimpin) yang paling ingin kamu terapkan dalam kehidupan sehari-hari?
+          </label>
+          <textarea 
+            id="reflection-text-input" 
+            rows="3" 
+            placeholder="Tuliskan komitmen atau kesan pribadimu di sini..."
+            class="w-full p-4 rounded-xl bg-parchment-50 border border-parchment-300 focus:border-amber-600 focus:ring-2 focus:ring-amber-200 outline-none text-xs sm:text-sm text-sepiaInk font-medium transition shadow-inner placeholder:text-parchment-400"
+          ></textarea>
+        </div>
+
+        <button 
+          onclick="submitReflection()" 
+          class="w-full sm:w-auto px-6 py-3 rounded-xl bg-merah-600 hover:bg-merah-700 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 active:scale-95"
+        >
+          <span>💌 Simpan Komitmen Kebangsaan</span>
+        </button>
+
+        <!-- Feedback Card Komitmen -->
+        <div id="reflection-response-card" class="hidden p-5 rounded-2xl bg-amber-50 border-2 border-vintageGold text-sepiaInk space-y-2">
+          <div class="flex items-center gap-2 text-sm font-bold text-vintageBrass">
+            <span>✨</span> Komitmen Terpahat dalam Sejarah!
+          </div>
+          <p id="reflection-summary-quote" class="text-xs sm:text-sm text-sepiaInk leading-relaxed italic">
+            <!-- Diisi JS -->
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Box Profil Pengembang MPI -->
+      <div class="bg-parchment-50 border border-parchment-300 rounded-3xl p-6 sm:p-8 shadow-paper space-y-4">
+        <h3 class="text-lg font-bold text-sepiaInk font-title flex items-center gap-2 border-b border-parchment-200 pb-3">
+          <span>🏛️</span> Profil Pengembang Multimedia Pembelajaran
+        </h3>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-merah-600 to-amber-700 text-white flex items-center justify-center text-3xl font-black font-title shadow-md shrink-0">
+            AGY
+          </div>
+          <div class="space-y-1 text-xs sm:text-sm">
+            <h4 class="font-bold text-sepiaInk text-base">Tim Pengembang Media Sejarah Indonesia</h4>
+            <p class="text-sepiaMuted">Pengembang Multimedia Pembelajaran Interaktif (MPI) & Desain UI/UX Pendidikan</p>
+            <p class="text-sepiaMuted"><strong>Target Pengguna:</strong> Siswa Kelas XI SMA (Fase F) • Kurikulum Merdeka</p>
+            <p class="text-vintageBrass font-mono text-xs">Teknologi: Single Page Application (HTML5, Tailwind CSS, Pure Vanilla JS, Web Audio API)</p>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-parchment-200 flex flex-wrap items-center justify-between text-xs text-sepiaMuted">
+          <span>© 1945 - 2026 Detik-Detik Proklamasi Kemerdekaan Indonesia.</span>
+          <span class="font-bold text-merah-700">Merdeka atau Mati! 🇮🇩</span>
+        </div>
+      </div>
+
+      <!-- Action Navigation Buttons -->
+      <div class="flex justify-between pt-2">
+        <button onclick="navigateTo('screen-evaluasi')" class="px-5 py-2.5 rounded-xl bg-parchment-200 hover:bg-parchment-300 text-sepiaInk font-bold text-xs shadow-sm transition">
+          ← Kembali ke Evaluasi
+        </button>
+        <button onclick="navigateTo('screen-menu')" class="px-6 py-2.5 rounded-xl bg-merah-600 hover:bg-merah-700 text-white font-bold text-xs shadow-vintage transition flex items-center gap-2">
+          <span>Ke Menu Utama</span>
+          <span>🏠</span>
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- MODAL POPUP DETAIL TOKOH PROKLAMASI        -->
+  <!-- ========================================== -->
+  <div id="tokoh-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-parchment-50 border-2 border-vintageGold rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative space-y-4 animate-scaleUp">
+      <button onclick="closeTokohModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-parchment-200 hover:bg-parchment-300 text-sepiaInk font-bold flex items-center justify-center transition">
+        ✕
+      </button>
+
+      <div class="flex items-center gap-4">
+        <div id="modal-tokoh-icon" class="w-16 h-16 rounded-2xl bg-amber-100 border-2 border-amber-300 flex items-center justify-center text-3xl shadow-inner shrink-0">
+          🎖️
+        </div>
+        <div>
+          <span id="modal-tokoh-role" class="text-xs font-bold text-merah-700 uppercase tracking-wider">Peran Heroik</span>
+          <h3 id="modal-tokoh-name" class="text-xl font-black text-sepiaInk font-title">Nama Tokoh</h3>
+        </div>
+      </div>
+
+      <div class="border-t border-parchment-300 pt-3 text-xs sm:text-sm text-sepiaMuted leading-relaxed space-y-2">
+        <p id="modal-tokoh-desc"></p>
+        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs text-sepiaInk font-medium">
+          <strong>Fakta Bersejarah:</strong> <span id="modal-tokoh-fact"></span>
+        </div>
+      </div>
+
+      <div class="pt-2 flex justify-end">
+        <button onclick="closeTokohModal()" class="px-4 py-2 bg-merah-600 hover:bg-merah-700 text-white rounded-xl text-xs font-bold transition">
+          Tutup Kisah
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERSISTENT FOOTER (Copyright & Status) -->
+  <footer class="bg-parchment-100 border-t border-parchment-300 py-3 text-center text-xs text-sepiaMuted">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-merah-700 font-title">Jejak Waktu 1945</span>
+        <span>•</span>
+        <span>Multimedia Pembelajaran Interaktif Sejarah Indonesia</span>
+      </div>
+      <div>
+        Kelas XI SMA / Fase F • Berbasis Kurikulum Merdeka
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT LOGIC (SELF-CONTAINED & ROBUST) -->
+  <!-- ========================================== -->
+  <script>
+    /* ========================================================
+       STATE MANAGEMENT
+       ======================================================== */
+    const appState = {
+      studentName: '',
+      studentClass: '',
+      isLoggedIn: false,
+      currentScreen: 'screen-cover',
+      soundEnabled: true,
+      currentMateriTab: 1,
+      visitedTabs: new Set([1]),
+      
+      // LKPD 1: Chronology Items
+      chronologyItems: [
+        { id: 1, order: 1, text: "Pengeboman atom di Hiroshima (6 Ags) & Nagasaki (9 Ags) oleh tentara Sekutu." },
+        { id: 2, order: 2, text: "Kaisar Hirohito mengumumkan penyerahan Jepang tanpa syarat (15 Ags 1945)." },
+        { id: 3, order: 3, text: "Pemuda membawa Soekarno & Hatta ke Rengasdengklok untuk pengamanan (16 Ags subuh)." },
+        { id: 4, order: 4, text: "Mr. Ahmad Soebardjo menjemput Soekarno-Hatta dengan jaminan nyawa (16 Ags petang)." },
+        { id: 5, order: 5, text: "Perumusan dan pengetikan teks Proklamasi di kediaman Laksamana Tadashi Maeda (17 Ags dini hari)." }
+      ],
+      currentChronologyOrder: [],
+
+      // LKPD 2: Matching
+      matchingPairs: [
+        { id: 'latief', name: 'Latief Hendraningrat', role: 'Komandan PETA & Pengibar bendera Merah Putih pertama kali di Pegangsaan Timur 56' },
+        { id: 'fatmawati', name: 'Ibu Fatmawati', role: 'Menjahit Bendera Pusaka Sang Saka Merah Putih dari kain katun Jepang' },
+        { id: 'sayuti', name: 'Sayuti Melik', role: 'Mengetik naskah otentik Proklamasi dan menyempurnakan 3 kata penting' },
+        { id: 'mendur', name: 'Frans & Alex Mendur', role: 'Fotografer IPPHOS yang mengubur klise foto proklamasi di tanah agar tak disita tentara Jepang' }
+      ],
+
+      // Quiz State
+      quizIndex: 0,
+      quizAnswers: [],
+      quizScore: 0,
+      quizCompleted: false,
+      
+      // HOTS Questions
+      questions: [
+        {
+          id: 1,
+          question: "Mengapa para pemuda (Chaerul Saleh dkk.) berkeras membawa Soekarno-Hatta ke Rengasdengklok dan menolak proklamasi dilakukan melalui lembaga PPKI?",
+          options: [
+            { text: "A. Pemuda ingin mengambil alih seluruh kekuasaan militer Jepang secara frontal di Karawang.", correct: false },
+            { text: "B. Pemuda ingin kemerdekaan dinyatakan murni atas kehendak bangsa sendiri, bukan dianggap 'hadiah' dari badan bentukan Jepang (PPKI).", correct: true },
+            { text: "C. PPKI dianggap tidak memiliki anggota yang cakap dalam menyusun undang-undang dasar negara.", correct: false },
+            { text: "D. Rengasdengklok memiliki persenjataan berat Sekutu yang siap melindungi Soekarno-Hatta dari tentara Jepang.", correct: false }
+          ],
+          explanation: "Golongan muda menolak keras proklamasi lewat PPKI karena PPKI dibentuk oleh Jepang (Jenderal Terauchi). Pemuda ingin kemerdekaan lahir dari perjuangan mandiri agar diakui kedaulatannya di mata internasional dan Sekutu."
+        },
+        {
+          id: 2,
+          question: "Analisis makna historis dari perubahan frasa 'wakil-wakil bangsa Indonesia' menjadi 'Atas nama bangsa Indonesia' atas usulan Sukarni adalah...",
+          options: [
+            { text: "A. Menghindari kesan bahwa kemerdekaan hanya dideklarasikan oleh anggota PPKI, melainkan mewakili segenap tumpah darah rakyat Indonesia.", correct: true },
+            { text: "B. Menyesuaikan dengan tuntutan Laksamana Maeda agar para menteri Angkatan Laut Jepang tidak ikut menandatangani.", correct: false },
+            { text: "C. Menghemat tempat tanda tangan karena kertas ketikan Sayuti Melik sangat kecil dan terbatas.", correct: false },
+            { text: "D. Menunda pengesahan susunan kabinet pertama Republik Indonesia hingga sidang berikutnya.", correct: false }
+          ],
+          explanation: "Frasa 'Atas nama bangsa Indonesia' menegaskan bahwa deklarasi tersebut bukan milik segelintir elite atau anggota PPKI semata, melainkan manifestasi dari seluruh tumpah darah rakyat Indonesia."
+        },
+        {
+          id: 3,
+          question: "Mengapa pembacaan Proklamasi yang semula direncanakan di Lapangan Ikada akhirnya dipindahkan ke halaman rumah Bung Karno di Jalan Pegangsaan Timur No. 56?",
+          options: [
+            { text: "A. Lapangan Ikada terendam banjir akibat hujan deras pada malam 16 Agustus 1945.", correct: false },
+            { text: "B. Menghindari bentrokan fisik berdarah dengan pasukan militer Jepang bersenjata lengkap yang telah mengepung Lapangan Ikada.", correct: true },
+            { text: "C. Rumah Bung Karno memiliki fasilitas mikrofon dan pemancar radio resmi tercanggih di Jakarta.", correct: false },
+            { text: "D. Lapangan Ikada telah disewa oleh tentara Sekutu untuk upacara pendaratan.", correct: false }
+          ],
+          explanation: "Tentara Jepang telah mencium rencana proklamasi dan mengepung Lapangan Ikada dengan senapan mesin dan panser. Untuk mencegah pertumpahan darah massal rakyat, Bung Karno memutuskan acara diadakan di kediamannya."
+        },
+        {
+          id: 4,
+          question: "Tindakan Frans dan Alex Mendur yang mengubur rol film negatif foto pembacaan Proklamasi di bawah pohon kantor Djawa Shinbun mencerminkan nilai karakter perjuangan...",
+          options: [
+            { text: "A. Ketakutan atas ancaman militer sehingga menyembunyikan barang bukti penting.", correct: false },
+            { text: "B. Keberanian dan kecerdikan tinggi dalam menyelamatkan bukti visual otentik lahirnya Republik Indonesia dari ancaman perampasan tentara Jepang.", correct: true },
+            { text: "C. Kepatuhan terhadap instruksi sensor pers pemerintah militer pendudukan Jepang.", correct: false },
+            { text: "D. Upaya menjual foto proklamasi dengan harga mahal kepada kantor berita Sekutu.", correct: false }
+          ],
+          explanation: "Jika rol film tersebut ditemukan tentara Jepang, bukti foto proklamasi akan dihancurkan selamanya. Keberanian Mendur bersaudara mengubur film tersebut menyelamatkan satu-satunya bukti visual momen paling bersejarah bangsa kita."
+        },
+        {
+          id: 5,
+          question: "Penulisan angka tahun '05 pada naskah otentik Proklamasi ('Djakarta, hari 17 boelan 8 tahoen 05') berakar dari konteks penanggalan...",
+          options: [
+            { text: "A. Kalender Saka Hindu yang biasa digunakan pada prasasti kerajaan kuno.", correct: false },
+            { text: "B. Singkatan dari tahun Masehi 1905 sebagai awal kebangkitan Budi Utomo.", correct: false },
+            { text: "C. Tahun 2605 Kalender Kekaisaran Jepang (Koki / Showa) yang berlaku resmi pada masa pendudukan militer 1945.", correct: true },
+            { text: "D. Kode rahasia militer PETA untuk mengelabui pos penjagaan Kempeitai.", correct: false }
+          ],
+          explanation: "Tahun '05 merupakan kependekan dari tahun 2605 Kalender Kaisar Jepang (Jimmu/Koki). Pada masa pendudukan 1942–1945, kalender resmi yang wajib digunakan adalah kalender kekaisaran Jepang tersebut."
+        }
+      ]
+    };
+
+    /* ========================================================
+       SYNTHESIZED AUDIO ENGINE (Web Audio API - Pure & Standalone)
+       ======================================================== */
+    let audioCtx = null;
+
+    function initAudio() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+      }
+    }
+
+    function playSound(type) {
+      if (!appState.soundEnabled) return;
+      try {
+        initAudio();
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+
+        const now = audioCtx.currentTime;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        if (type === 'click') {
+          // Retro crisp mechanical click
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(600, now);
+          osc.frequency.exponentialRampToValueAtTime(120, now + 0.05);
+          gain.gain.setValueAtTime(0.15, now);
+          gain.gain.linearRampToValueAtTime(0.01, now + 0.05);
+          osc.start(now);
+          osc.stop(now + 0.05);
+        } else if (type === 'success') {
+          // Cheerful major chord arpeggio
+          const notes = [523.25, 659.25, 783.99, 1046.50]; // C E G C
+          notes.forEach((freq, idx) => {
+            const noteOsc = audioCtx.createOscillator();
+            const noteGain = audioCtx.createGain();
+            noteOsc.connect(noteGain);
+            noteGain.connect(audioCtx.destination);
+            noteOsc.type = 'sine';
+            noteOsc.frequency.setValueAtTime(freq, now + idx * 0.08);
+            noteGain.gain.setValueAtTime(0.2, now + idx * 0.08);
+            noteGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.25);
+            noteOsc.start(now + idx * 0.08);
+            noteOsc.stop(now + idx * 0.08 + 0.25);
+          });
+        } else if (type === 'wrong') {
+          // Gentle low error thud
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(180, now);
+          osc.frequency.linearRampToValueAtTime(110, now + 0.2);
+          gain.gain.setValueAtTime(0.2, now);
+          gain.gain.linearRampToValueAtTime(0.01, now + 0.2);
+          osc.start(now);
+          osc.stop(now + 0.2);
+        } else if (type === 'fanfare') {
+          // Celebration fanfare
+          const notes = [440, 554.37, 659.25, 880];
+          notes.forEach((freq, idx) => {
+            const fOsc = audioCtx.createOscillator();
+            const fGain = audioCtx.createGain();
+            fOsc.connect(fGain);
+            fGain.connect(audioCtx.destination);
+            fOsc.type = 'triangle';
+            fOsc.frequency.setValueAtTime(freq, now + idx * 0.12);
+            fGain.gain.setValueAtTime(0.25, now + idx * 0.12);
+            fGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.12 + 0.4);
+            fOsc.start(now + idx * 0.12);
+            fOsc.stop(now + idx * 0.12 + 0.4);
+          });
+        }
+      } catch (e) {
+        console.warn('Audio synthesis issue:', e);
+      }
+    }
+
+    function toggleSound() {
+      appState.soundEnabled = !appState.soundEnabled;
+      const icon = document.getElementById('sound-icon');
+      if (appState.soundEnabled) {
+        icon.textContent = '🔊';
+        playSound('click');
+      } else {
+        icon.textContent = '🔇';
+      }
+    }
+
+    /* ========================================================
+       CONFETTI EFFECT (Pure Canvas Particle Generator)
+       ======================================================== */
+    function launchConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const particles = [];
+      const colors = ['#dc2626', '#ffffff', '#c28b26', '#f59e0b', '#7f1d1d'];
+
+      for (let i = 0; i < 120; i++) {
+        particles.push({
+          x: canvas.width / 2,
+          y: canvas.height / 2,
+          vx: (Math.random() - 0.5) * 16,
+          vy: (Math.random() - 0.8) * 16,
+          size: Math.random() * 8 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          vRot: (Math.random() - 0.5) * 10,
+          gravity: 0.35,
+          alpha: 1
+        });
+      }
+
+      let animationFrame;
+      function render() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        let active = 0;
+
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += p.gravity;
+          p.rotation += p.vRot;
+          p.alpha -= 0.008;
+
+          if (p.alpha > 0) {
+            active++;
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate((p.rotation * Math.PI) / 180);
+            ctx.globalAlpha = Math.max(0, p.alpha);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+            ctx.restore();
+          }
+        });
+
+        if (active > 0) {
+          animationFrame = requestAnimationFrame(render);
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          cancelAnimationFrame(animationFrame);
+        }
+      }
+      render();
+    }
+
+    /* ========================================================
+       SPA NAVIGATION & SCREEN MANAGEMENT
+       ======================================================== */
+    function navigateTo(screenId) {
+      // If not logged in and trying to bypass cover
+      if (!appState.isLoggedIn && screenId !== 'screen-cover') {
+        navigateTo('screen-cover');
+        const err = document.getElementById('login-error-msg');
+        err.classList.remove('hidden');
+        return;
+      }
+
+      playSound('click');
+
+      // Hide all screens
+      const screens = document.querySelectorAll('.screen-view');
+      screens.forEach(s => {
+        s.classList.remove('active');
+      });
+
+      // Show target screen
+      const target = document.getElementById(screenId);
+      if (target) {
+        target.classList.add('active');
+        appState.currentScreen = screenId;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        updateProgressBar();
+      }
+    }
+
+    function updateProgressBar() {
+      let progress = 10;
+      if (appState.currentScreen === 'screen-menu') progress = 25;
+      else if (appState.currentScreen === 'screen-petunjuk') progress = 30;
+      else if (appState.currentScreen === 'screen-tujuan') progress = 45;
+      else if (appState.currentScreen === 'screen-materi') progress = 65;
+      else if (appState.currentScreen === 'screen-aktivitas') progress = 80;
+      else if (appState.currentScreen === 'screen-evaluasi') progress = 90;
+      else if (appState.currentScreen === 'screen-refleksi') progress = 100;
+
+      const bar = document.getElementById('header-progress-bar');
+      const text = document.getElementById('header-progress-text');
+      if (bar) bar.style.width = progress + '%';
+      if (text) text.textContent = progress + '% Terjelajahi';
+    }
+
+    /* ========================================================
+       1. LOGIN / COVER HANDLER
+       ======================================================== */
+    function submitLogin() {
+      const nameInput = document.getElementById('student-name-input');
+      const classInput = document.getElementById('student-class-input');
+      const errorMsg = document.getElementById('login-error-msg');
+
+      const nameVal = nameInput.value.trim();
+      const classVal = classInput.value;
+
+      if (!nameVal || !classVal) {
+        errorMsg.classList.remove('hidden');
+        nameInput.classList.add('border-merah-500', 'animate-pulse');
+        playSound('wrong');
+        return;
+      }
+
+      // Save to state
+      appState.studentName = nameVal;
+      appState.studentClass = classVal;
+      appState.isLoggedIn = true;
+
+      playSound('success');
+
+      // Update Header & Dashboard greetings
+      document.getElementById('header-student-greeting').textContent = `Pejuang: ${nameVal}`;
+      document.getElementById('dash-student-name').textContent = nameVal;
+      document.getElementById('dash-class-name').textContent = `Kelas: ${classVal}`;
+
+      // Show header
+      document.getElementById('main-header').classList.remove('hidden');
+
+      // Move to dashboard
+      navigateTo('screen-menu');
+    }
+
+    /* ========================================================
+       2. APERSEPSI INTERAKTIF
+       ======================================================== */
+    function selectApersepsi(option) {
+      playSound('click');
+      const feedback = document.getElementById('apersepsi-feedback');
+      const text = document.getElementById('apersepsi-feedback-text');
+      feedback.classList.remove('hidden');
+
+      if (option === 'A') {
+        text.innerHTML = `<strong>Tepat sekali analisismu!</strong> Inilah ketakutan terbesar Sukarni dan Chaerul Saleh. Jika kemerdekaan disahkan melalui sidang PPKI, Sekutu (Inggris dan NICA Belanda) akan dengan mudah menganggap kemerdekaan Indonesia sebagai hadiah boneka fasis Jepang dan berhak melucuti kedaulatan kita. Penolakan pemuda menyelamatkan martabat revolusi bangsa!`;
+      } else if (option === 'B') {
+        text.innerHTML = `<strong>Analisis yang sangat beralasan!</strong> Soekarno dan Hatta saat itu memang masih mempertimbangkan informasi resmi militer Jepang dan menunggu kepastian status quo. Tindakan pemuda membawa mereka ke Rengasdengklok berhasil memaksa Soekarno-Hatta fokus mengambil momentum revolusi tanpa intervensi Gunseikan (pemerintah militer Jepang).`;
+      } else if (option === 'C') {
+        text.innerHTML = `<strong>Wawasan sejarah yang tajam!</strong> Hukum internasional mengenal istilah <em>Vacuum of Power</em>. Jika kekosongan itu tidak segera diisi dengan Proklamasi Kemerdekaan berdaulat oleh bangsa Indonesia, maka tentara Sekutu yang ditugaskan menjaga Hindia Belanda akan otomatis mengembalikan kekuasaan kepada pemerintah kolonial Belanda (NICA).`;
+      }
+
+      // Mark Tujuan badge as Done
+      const badge = document.getElementById('badge-menu-tujuan');
+      if (badge) {
+        badge.textContent = '✓ Apersepsi Selesai';
+        badge.className = 'text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300';
+      }
+    }
+
+    /* ========================================================
+       3. MATERI TAB SWITCHING & 3D FLIP CARDS
+       ======================================================== */
+    function switchMateriTab(tabNumber) {
+      playSound('click');
+      appState.currentMateriTab = tabNumber;
+      appState.visitedTabs.add(tabNumber);
+
+      // Hide all contents
+      for (let i = 1; i <= 4; i++) {
+        const el = document.getElementById(`materi-tab-${i}`);
+        const btn = document.getElementById(`tab-btn-${i}`);
+        if (el) el.classList.add('hidden');
+        if (btn) {
+          btn.className = 'tab-materi-btn px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-1.5 bg-parchment-200 hover:bg-parchment-300 text-sepiaInk';
+        }
+      }
+
+      // Show target tab
+      const targetContent = document.getElementById(`materi-tab-${tabNumber}`);
+      const targetBtn = document.getElementById(`tab-btn-${tabNumber}`);
+      if (targetContent) targetContent.classList.remove('hidden');
+      if (targetBtn) {
+        targetBtn.className = 'tab-materi-btn px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-1.5 bg-merah-600 text-white shadow-sm';
+      }
+
+      // Update Prev / Next Buttons
+      const btnPrev = document.getElementById('btn-materi-prev');
+      const btnNext = document.getElementById('btn-materi-next');
+
+      if (tabNumber === 1) {
+        btnPrev.disabled = true;
+        btnPrev.classList.add('opacity-50', 'cursor-not-allowed');
+      } else {
+        btnPrev.disabled = false;
+        btnPrev.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+
+      if (tabNumber === 4) {
+        btnNext.innerHTML = `<span>Lanjut ke Aktivitas LKPD</span> <span>🎮</span>`;
+        btnNext.onclick = () => navigateTo('screen-aktivitas');
+      } else {
+        btnNext.innerHTML = `<span>Babak Selanjutnya</span> <span>→</span>`;
+        btnNext.onclick = () => nextMateriTab();
+      }
+
+      // Update Menu Materi Badge
+      if (appState.visitedTabs.size >= 4) {
+        const b = document.getElementById('badge-menu-materi');
+        if (b) {
+          b.textContent = '✓ 4 Babak Selesai';
+          b.className = 'text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300';
+        }
+      }
+    }
+
+    function prevMateriTab() {
+      if (appState.currentMateriTab > 1) {
+        switchMateriTab(appState.currentMateriTab - 1);
+      }
+    }
+
+    function nextMateriTab() {
+      if (appState.currentMateriTab < 4) {
+        switchMateriTab(appState.currentMateriTab + 1);
+      }
+    }
+
+    function toggleFlip(cardElement) {
+      playSound('click');
+      cardElement.classList.toggle('flipped');
+    }
+
+    /* Highlight Differences in Proklamasi Text */
+    let isHighlighted = false;
+    function toggleNaskahHighlight() {
+      playSound('click');
+      isHighlighted = !isHighlighted;
+      const klad1 = document.getElementById('diff-klad-1');
+      const klad2 = document.getElementById('diff-klad-2');
+      const klad3 = document.getElementById('diff-klad-3');
+
+      const ot1 = document.getElementById('diff-otentik-1');
+      const ot2 = document.getElementById('diff-otentik-2');
+      const ot3 = document.getElementById('diff-otentik-3');
+
+      const btnLabel = document.getElementById('btn-highlight-label');
+
+      if (isHighlighted) {
+        klad1.className = 'px-1 bg-amber-200 text-amber-900 line-through rounded font-bold';
+        klad2.className = 'px-1 bg-red-200 text-red-900 line-through rounded font-bold';
+        klad3.className = 'px-1 bg-blue-200 text-blue-900 line-through rounded font-bold';
+
+        ot1.className = 'px-1 bg-amber-300 text-amber-950 font-black rounded underline decoration-2';
+        ot2.className = 'px-1 bg-red-300 text-red-950 font-black rounded underline decoration-2';
+        ot3.className = 'px-1 bg-blue-300 text-blue-950 font-black rounded underline decoration-2';
+
+        btnLabel.textContent = 'Sembunyikan Sorotan';
+      } else {
+        klad1.className = 'px-1 rounded';
+        klad2.className = 'px-1 rounded';
+        klad3.className = 'px-1 rounded';
+
+        ot1.className = 'px-1 rounded font-bold';
+        ot2.className = 'px-1 rounded font-bold';
+        ot3.className = 'px-1 rounded font-bold';
+
+        btnLabel.textContent = 'Sorot 3 Perubahan Kata';
+      }
+    }
+
+    /* Synthesized Proklamasi Simulation */
+    let proklamasiPlaying = false;
+    function playProklamasiAudio() {
+      if (proklamasiPlaying) return;
+      proklamasiPlaying = true;
+      playSound('fanfare');
+
+      const btnLabel = document.getElementById('btn-audio-label');
+      const btnIcon = document.getElementById('btn-audio-icon');
+      btnLabel.textContent = 'Memperdengarkan Detik Proklamasi...';
+      btnIcon.textContent = '🔊';
+
+      setTimeout(() => {
+        btnLabel.textContent = 'Dengarkan Ulang Suasana';
+        btnIcon.textContent = '▶️';
+        proklamasiPlaying = false;
+      }, 4000);
+    }
+
+    /* ========================================================
+       TOKOH MODAL DATA & HANDLERS
+       ======================================================== */
+    const tokohData = {
+      latief: {
+        name: "Chudancho Latief Hendraningrat",
+        role: "Perwira PETA & Pengibar Sang Saka Pertama",
+        icon: "🎖️",
+        desc: "Mengenakan seragam PETA lengkap dengan pedang samurai katana, Latief bertanggung jawab atas keamanan di sekitar kediaman Bung Karno. Ia mengibarkan Sang Saka Merah Putih bersama S. Suhud dengan tenang dan khidmat.",
+        fact: "Saat bertugas, ia mengamankan halaman dari kemungkinan serbuan tentara Jepang yang berpatroli dengan panser."
+      },
+      suhud: {
+        name: "S. Suhud",
+        role: "Pendamping Pengerek Bendera",
+        icon: "🎋",
+        desc: "Suhud bertugas mengambil bendera pusaka dari baki yang dibawa dan mengikatkannya ke tali tiang bambu yang dibuat secara darurat beberapa jam sebelum upacara dimulai.",
+        fact: "Tiang bendera pertama tersebut hanyalah sebatang bambu bulat yang ditancapkan secara tergesa di depan beranda."
+      },
+      fatmawati: {
+        name: "Ibu Fatmawati Soekarno",
+        role: "Penjahit Bendera Pusaka Sang Saka",
+        icon: "🧵",
+        desc: "Dengan kondisi hamil tua mengandung Guntur Soekarnoputra, Ibu Fatmawati menjahit kain merah dan putih berbahan katun Jepang menggunakan mesin jahit tangan bernyanyi Singer.",
+        fact: "Kain merah putih tersebut diperoleh dari perwira Jepang Shimizu yang bersimpati pada perjuangan kemerdekaan."
+      },
+      mendur: {
+        name: "Frans & Alex Mendur",
+        role: "Fotografer IPPHOS Penyelamat Sejarah",
+        icon: "📷",
+        desc: "Dua bersaudara juru foto IPPHOS ini mengabadikan detik-detik pembacaan teks proklamasi dan pengibaran bendera pusaka. Saat tentara Jepang hendak menyita kameranya, Frans berbohong bahwa filmnya sudah rusak.",
+        fact: "Frans mengubur rol film negatif di bawah pohon di kantor harian Asia Raja/Djawa Shinbun hingga situasi aman!"
+      },
+      bmdiah: {
+        name: "Burhanuddin Mohammad (B.M.) Diah",
+        role: "Wartawan & Penyelamat Naskah Klad",
+        icon: "📰",
+        desc: "Wartawan muda pemberani yang memungut naskah konsep asli tulisan tangan Bung Karno dari tong sampah di rumah Maeda dan menyimpannya selama 47 tahun sebelum menyerahkannya ke Presiden RI pada 1992.",
+        fact: "B.M. Diah juga memperbanyak pamflet teks proklamasi dan menyebarkannya ke stasiun kereta dan kantor buruh."
+      },
+      ronodipuro: {
+        name: "Jusuf Ronodipuro",
+        role: "Penyiar Radio Domei (Hoso Kyoku)",
+        icon: "📻",
+        desc: "Meskipun studio radio dijaga ketat oleh serdadu Jepang dengan bayonet terhunus, Jusuf berhasil menyusup ke ruang pemancar dan menyiarkan berita Proklamasi Kemerdekaan ke seluruh pelosok tanah air dan dunia internasional.",
+        fact: "Akibat aksinya, Jusuf Ronodipuro sempat disiksa oleh Kempeitai sebelum akhirnya dibebaskan rakyat."
+      }
+    };
+
+    function showTokohModal(key) {
+      playSound('click');
+      const data = tokohData[key];
+      if (!data) return;
+
+      document.getElementById('modal-tokoh-name').textContent = data.name;
+      document.getElementById('modal-tokoh-role').textContent = data.role;
+      document.getElementById('modal-tokoh-icon').textContent = data.icon;
+      document.getElementById('modal-tokoh-desc').textContent = data.desc;
+      document.getElementById('modal-tokoh-fact').textContent = data.fact;
+
+      const modal = document.getElementById('tokoh-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeTokohModal() {
+      playSound('click');
+      const modal = document.getElementById('tokoh-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    /* ========================================================
+       4. AKTIVITAS & LKPD INTERAKTIF (Mini-Games)
+       ======================================================== */
+    function switchGameMode(mode) {
+      playSound('click');
+      const btn1 = document.getElementById('game-tab-btn-1');
+      const btn2 = document.getElementById('game-tab-btn-2');
+      const mode1 = document.getElementById('game-mode-1');
+      const mode2 = document.getElementById('game-mode-2');
+
+      if (mode === 1) {
+        btn1.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-700 text-white shadow-sm';
+        btn2.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-parchment-200 text-sepiaInk hover:bg-parchment-300';
+        mode1.classList.remove('hidden');
+        mode2.classList.add('hidden');
+      } else {
+        btn2.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-700 text-white shadow-sm';
+        btn1.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-parchment-200 text-sepiaInk hover:bg-parchment-300';
+        mode2.classList.remove('hidden');
+        mode1.classList.add('hidden');
+      }
+    }
+
+    /* Game 1: Chronology Sorter */
+    function initChronologyGame() {
+      // Shuffle items
+      const items = [...appState.chronologyItems];
+      for (let i = items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [items[i], items[j]] = [items[j], items[i]];
+      }
+      appState.currentChronologyOrder = items;
+      renderChronologyList();
+    }
+
+    function resetChronologyGame() {
+      playSound('click');
+      document.getElementById('chronology-feedback').textContent = '';
+      initChronologyGame();
+    }
+
+    function renderChronologyList() {
+      const container = document.getElementById('chronology-list');
+      container.innerHTML = '';
+
+      appState.currentChronologyOrder.forEach((item, index) => {
+        const row = document.createElement('div');
+        row.className = 'flex items-center gap-3 p-3.5 bg-parchment-100 border border-parchment-300 rounded-xl transition duration-200 shadow-sm';
+        
+        row.innerHTML = `
+          <div class="w-8 h-8 rounded-lg bg-amber-100 border border-amber-300 text-amber-900 flex items-center justify-center font-bold text-xs shrink-0 font-mono">
+            ${index + 1}
+          </div>
+          <div class="flex-1 text-xs sm:text-sm font-medium text-sepiaInk leading-relaxed">
+            ${item.text}
+          </div>
+          <div class="flex items-center gap-1 shrink-0">
+            <button onclick="moveChronology(${index}, -1)" ${index === 0 ? 'disabled class="opacity-30 p-1.5 rounded bg-parchment-200 text-xs"' : 'class="p-1.5 rounded bg-parchment-200 hover:bg-amber-200 text-xs font-bold transition"'} title="Pindah ke Atas">
+              ▲
+            </button>
+            <button onclick="moveChronology(${index}, 1)" ${index === appState.currentChronologyOrder.length - 1 ? 'disabled class="opacity-30 p-1.5 rounded bg-parchment-200 text-xs"' : 'class="p-1.5 rounded bg-parchment-200 hover:bg-amber-200 text-xs font-bold transition"'} title="Pindah ke Bawah">
+              ▼
+            </button>
+          </div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    function moveChronology(index, direction) {
+      playSound('click');
+      const targetIndex = index + direction;
+      if (targetIndex < 0 || targetIndex >= appState.currentChronologyOrder.length) return;
+
+      const temp = appState.currentChronologyOrder[index];
+      appState.currentChronologyOrder[index] = appState.currentChronologyOrder[targetIndex];
+      appState.currentChronologyOrder[targetIndex] = temp;
+
+      renderChronologyList();
+      document.getElementById('chronology-feedback').textContent = '';
+    }
+
+    function checkChronologyAnswer() {
+      const isCorrect = appState.currentChronologyOrder.every((item, idx) => item.order === (idx + 1));
+      const feedback = document.getElementById('chronology-feedback');
+
+      if (isCorrect) {
+        playSound('success');
+        launchConfetti();
+        feedback.className = 'text-xs font-bold text-emerald-800 bg-emerald-100 p-2.5 rounded-xl border border-emerald-300 flex items-center gap-1.5';
+        feedback.innerHTML = `<span>🎉</span> Tepat Sekali! Kamu menguasai urutan kronologi peristiwa Proklamasi dengan sempurna!`;
+        
+        // Mark Game Badge Done
+        const gb = document.getElementById('badge-menu-game');
+        if (gb) {
+          gb.textContent = '✓ Simulasi Lulus';
+          gb.className = 'text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300';
+        }
+      } else {
+        playSound('wrong');
+        feedback.className = 'text-xs font-bold text-merah-700 bg-merah-50 p-2.5 rounded-xl border border-merah-200 flex items-center gap-1.5';
+        feedback.innerHTML = `<span>⚠️</span> Masih ada urutan yang belum tepat. Ingat: Bom atom lebih dulu, lalu penyerahan Jepang, Rengasdengklok, jaminan Soebardjo, hingga perumusan di rumah Maeda.`;
+      }
+    }
+
+    /* Game 2: Matching Pairs */
+    function initMatchingGame() {
+      const container = document.getElementById('matching-game-container');
+      container.innerHTML = '';
+
+      appState.matchingPairs.forEach(pair => {
+        const card = document.createElement('div');
+        card.className = 'p-3.5 bg-parchment-100 border border-parchment-300 rounded-xl space-y-2';
+
+        card.innerHTML = `
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+            <span class="font-bold text-xs sm:text-sm text-merah-800 font-title flex items-center gap-1.5">
+              <span>👤</span> ${pair.name}
+            </span>
+            <select id="match-select-${pair.id}" class="w-full sm:w-80 px-2.5 py-2 rounded-lg bg-parchment-50 border border-parchment-300 text-xs text-sepiaInk font-medium outline-none focus:border-emerald-600">
+              <option value="">-- Pilih Peran Heroik --</option>
+              <option value="latief">Pengibar bendera Merah Putih pertama & Komandan PETA</option>
+              <option value="fatmawati">Menjahit Bendera Pusaka Sang Saka dari kain katun</option>
+              <option value="sayuti">Mengetik naskah otentik & menyempurnakan 3 kata penting</option>
+              <option value="mendur">Fotografer yang mengubur klise foto agar tak disita Jepang</option>
+            </select>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function checkMatchingAnswer() {
+      let correctCount = 0;
+      appState.matchingPairs.forEach(pair => {
+        const select = document.getElementById(`match-select-${pair.id}`);
+        if (select && select.value === pair.id) {
+          correctCount++;
+          select.className = 'w-full sm:w-80 px-2.5 py-2 rounded-lg bg-emerald-50 border-2 border-emerald-500 text-xs text-emerald-900 font-bold';
+        } else if (select) {
+          select.className = 'w-full sm:w-80 px-2.5 py-2 rounded-lg bg-merah-50 border-2 border-merah-400 text-xs text-merah-900';
+        }
+      });
+
+      const feedback = document.getElementById('matching-feedback');
+      if (correctCount === appState.matchingPairs.length) {
+        playSound('success');
+        launchConfetti();
+        feedback.className = 'text-xs font-bold text-emerald-800 bg-emerald-100 p-2.5 rounded-xl border border-emerald-300';
+        feedback.innerHTML = `<span>🎉</span> Luar biasa! Seluruh tokoh dan peran berhasil dijodohkan dengan tepat (4/4)!`;
+      } else {
+        playSound('wrong');
+        feedback.className = 'text-xs font-bold text-merah-700 bg-merah-50 p-2.5 rounded-xl border border-merah-200';
+        feedback.innerHTML = `<span>⚠️</span> Baru ${correctCount} dari 4 tokoh yang tepat. Periksa kembali pilihan Anda!`;
+      }
+    }
+
+    /* ========================================================
+       5. KUIS HOTS & SERTIFIKAT DIGITAL
+       ======================================================== */
+    let selectedOptionIndex = null;
+    let quizLocked = false;
+
+    function renderCurrentQuiz() {
+      const q = appState.questions[appState.quizIndex];
+      document.getElementById('quiz-num-display').textContent = (appState.quizIndex + 1);
+      document.getElementById('quiz-question-text').textContent = q.question;
+      document.getElementById('quiz-current-score').textContent = `${appState.quizScore} Poin`;
+
+      const optionsBox = document.getElementById('quiz-options-container');
+      optionsBox.innerHTML = '';
+      selectedOptionIndex = null;
+      quizLocked = false;
+
+      const feedbackBox = document.getElementById('quiz-feedback-box');
+      feedbackBox.classList.add('hidden');
+
+      const nextBtn = document.getElementById('btn-quiz-next');
+      nextBtn.innerHTML = `<span>Kunci Jawaban</span> <span>→</span>`;
+
+      q.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.id = `opt-btn-${idx}`;
+        btn.className = 'w-full p-4 rounded-xl border-2 border-parchment-300 hover:border-purple-500 bg-parchment-100 hover:bg-parchment-50 text-left text-xs sm:text-sm text-sepiaInk transition shadow-sm font-medium flex items-center justify-between active:scale-98';
+        btn.onclick = () => selectQuizOption(idx);
+        btn.innerHTML = `
+          <span>${opt.text}</span>
+          <span class="w-5 h-5 rounded-full border border-parchment-300 flex items-center justify-center text-[10px] text-transparent" id="opt-check-${idx}">✓</span>
+        `;
+        optionsBox.appendChild(btn);
+      });
+    }
+
+    function selectQuizOption(index) {
+      if (quizLocked) return;
+      playSound('click');
+      selectedOptionIndex = index;
+
+      appState.questions[appState.quizIndex].options.forEach((_, idx) => {
+        const btn = document.getElementById(`opt-btn-${idx}`);
+        const check = document.getElementById(`opt-check-${idx}`);
+        if (idx === index) {
+          btn.className = 'w-full p-4 rounded-xl border-2 border-purple-700 bg-purple-50 text-left text-xs sm:text-sm text-purple-950 font-bold shadow-sm flex items-center justify-between';
+          check.className = 'w-5 h-5 rounded-full bg-purple-700 text-white flex items-center justify-center text-[10px] font-bold';
+        } else {
+          btn.className = 'w-full p-4 rounded-xl border-2 border-parchment-300 bg-parchment-100 text-left text-xs sm:text-sm text-sepiaInk font-medium flex items-center justify-between opacity-80';
+          check.className = 'w-5 h-5 rounded-full border border-parchment-300 flex items-center justify-center text-[10px] text-transparent';
+        }
+      });
+    }
+
+    function submitQuizAnswer() {
+      const q = appState.questions[appState.quizIndex];
+      const nextBtn = document.getElementById('btn-quiz-next');
+
+      // If already locked, proceed to next question
+      if (quizLocked) {
+        appState.quizIndex++;
+        if (appState.quizIndex < appState.questions.length) {
+          renderCurrentQuiz();
+        } else {
+          finishQuiz();
+        }
+        return;
+      }
+
+      // Check selection
+      if (selectedOptionIndex === null) {
+        playSound('wrong');
+        alert('Silakan pilih salah satu opsi jawaban terlebih dahulu!');
+        return;
+      }
+
+      quizLocked = true;
+      const isCorrect = q.options[selectedOptionIndex].correct;
+      appState.quizAnswers.push({
+        qIndex: appState.quizIndex,
+        selectedIdx: selectedOptionIndex,
+        correct: isCorrect
+      });
+
+      const selectedBtn = document.getElementById(`opt-btn-${selectedOptionIndex}`);
+      const feedbackBox = document.getElementById('quiz-feedback-box');
+      feedbackBox.classList.remove('hidden');
+
+      if (isCorrect) {
+        playSound('success');
+        appState.quizScore += 20;
+        document.getElementById('quiz-current-score').textContent = `${appState.quizScore} Poin`;
+        selectedBtn.className = 'w-full p-4 rounded-xl border-2 border-emerald-600 bg-emerald-100 text-left text-xs sm:text-sm text-emerald-950 font-bold shadow flex items-center justify-between';
+        
+        feedbackBox.className = 'p-4 rounded-xl border border-emerald-300 bg-emerald-50 text-xs text-emerald-900 leading-relaxed';
+        feedbackBox.innerHTML = `<strong>Jawabanmu Tepat! 🌟</strong> ${q.explanation}`;
+      } else {
+        playSound('wrong');
+        selectedBtn.className = 'w-full p-4 rounded-xl border-2 border-merah-500 bg-merah-100 text-left text-xs sm:text-sm text-merah-950 font-bold shadow flex items-center justify-between';
+        
+        // Highlight correct option
+        q.options.forEach((opt, idx) => {
+          if (opt.correct) {
+            const correctBtn = document.getElementById(`opt-btn-${idx}`);
+            correctBtn.className = 'w-full p-4 rounded-xl border-2 border-emerald-600 bg-emerald-50 text-left text-xs sm:text-sm text-emerald-950 font-bold flex items-center justify-between';
+          }
+        });
+
+        feedbackBox.className = 'p-4 rounded-xl border border-merah-300 bg-merah-50 text-xs text-merah-900 leading-relaxed';
+        feedbackBox.innerHTML = `<strong>Kurang Tepat. 💡</strong> ${q.explanation}`;
+      }
+
+      if (appState.quizIndex === appState.questions.length - 1) {
+        nextBtn.innerHTML = `<span>Lihat Piagam Sertifikat</span> <span>🏆</span>`;
+      } else {
+        nextBtn.innerHTML = `<span>Lanjut Soal Berikutnya</span> <span>→</span>`;
+      }
+    }
+
+    function finishQuiz() {
+      appState.quizCompleted = true;
+      playSound('fanfare');
+      launchConfetti();
+
+      // Hide question box, show result view
+      document.getElementById('quiz-question-box').classList.add('hidden');
+      const resultView = document.getElementById('quiz-result-view');
+      resultView.classList.remove('hidden');
+
+      // Populate certificate
+      document.getElementById('cert-student-name').textContent = appState.studentName || 'Siswa Teladan';
+      document.getElementById('cert-student-class').textContent = `Kelas: ${appState.studentClass || 'XI SMA'}`;
+      document.getElementById('cert-final-score').textContent = appState.quizScore;
+
+      // Motivation predicate
+      let predicate = 'Pejuang Kemerdekaan Teladan';
+      if (appState.quizScore === 100) predicate = 'Sejarawan Paripurna Bangsa';
+      else if (appState.quizScore >= 80) predicate = 'Analis Sejarah Unggul';
+      else if (appState.quizScore >= 60) predicate = 'Pejuang Pemikir Muda';
+      document.getElementById('cert-predicate').textContent = predicate;
+
+      // Update Menu Evaluasi Badge
+      const qb = document.getElementById('badge-menu-kuis');
+      if (qb) {
+        qb.textContent = `✓ Nilai: ${appState.quizScore}`;
+        qb.className = 'text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300';
+      }
+
+      renderQuizReview();
+    }
+
+    function restartQuiz() {
+      playSound('click');
+      appState.quizIndex = 0;
+      appState.quizScore = 0;
+      appState.quizAnswers = [];
+      appState.quizCompleted = false;
+
+      document.getElementById('quiz-result-view').classList.add('hidden');
+      document.getElementById('quiz-question-box').classList.remove('hidden');
+      renderCurrentQuiz();
+    }
+
+    function toggleQuizReview() {
+      playSound('click');
+      const reviewBox = document.getElementById('quiz-review-section');
+      reviewBox.classList.toggle('hidden');
+    }
+
+    function renderQuizReview() {
+      const container = document.getElementById('quiz-review-container');
+      container.innerHTML = '';
+
+      appState.questions.forEach((q, idx) => {
+        const userAns = appState.quizAnswers[idx];
+        const isCorrect = userAns ? userAns.correct : false;
+        const chosenText = userAns !== undefined ? q.options[userAns.selectedIdx].text : 'Tidak dijawab';
+        const correctText = q.options.find(o => o.correct).text;
+
+        const card = document.createElement('div');
+        card.className = `p-4 rounded-2xl border ${isCorrect ? 'border-emerald-300 bg-emerald-50/50' : 'border-merah-200 bg-merah-50/50'} text-xs space-y-2`;
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between font-bold">
+            <span class="text-sepiaInk">Soal ${idx + 1}: ${q.question}</span>
+            <span class="${isCorrect ? 'text-emerald-700' : 'text-merah-700'}">${isCorrect ? '✓ Benar (+20)' : '✗ Salah (0)'}</span>
+          </div>
+          <div class="text-sepiaMuted">
+            <div><strong>Jawabanmu:</strong> ${chosenText}</div>
+            <div><strong>Kunci Jawaban:</strong> <span class="text-emerald-800 font-semibold">${correctText}</span></div>
+          </div>
+          <p class="text-sepiaInk italic border-t border-parchment-200 pt-1.5 font-sans">
+            <strong>Pembahasan:</strong> ${q.explanation}
+          </p>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    /* ========================================================
+       6. REFLEKSI DIRI & NILAI KARAKTER
+       ======================================================== */
+    let selectedFeel = '';
+
+    function selectEmojiFeel(btnElement, feelLabel) {
+      playSound('click');
+      selectedFeel = feelLabel;
+
+      document.querySelectorAll('.emoji-btn').forEach(b => {
+        b.className = 'emoji-btn p-3 rounded-xl border border-parchment-300 bg-parchment-100 text-center transition flex flex-col items-center gap-1 opacity-70';
+      });
+
+      btnElement.className = 'emoji-btn p-3 rounded-xl border-2 border-amber-600 bg-amber-50 text-center transition flex flex-col items-center gap-1 font-bold shadow-sm';
+    }
+
+    function submitReflection() {
+      const input = document.getElementById('reflection-text-input');
+      const textVal = input.value.trim();
+
+      if (!textVal) {
+        playSound('wrong');
+        alert('Silakan tuliskan refleksi atau komitmen kebangsaanmu terlebih dahulu!');
+        input.focus();
+        return;
+      }
+
+      playSound('success');
+      launchConfetti();
+
+      const card = document.getElementById('reflection-response-card');
+      const quote = document.getElementById('reflection-summary-quote');
+      card.classList.remove('hidden');
+
+      quote.innerHTML = `
+        "${textVal}"<br>
+        <span class="block mt-2 font-bold font-sans text-amber-900 not-italic">
+          — ${appState.studentName || 'Pelajar Sejati'} (${appState.studentClass || 'XI SMA'}), Berjiwa: ${selectedFeel || 'Nasionalis Pancasila'}.
+        </span>
+      `;
+
+      card.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    /* ========================================================
+       INIT ON PAGE LOAD
+       ======================================================== */
+    window.addEventListener('DOMContentLoaded', () => {
+      initChronologyGame();
+      initMatchingGame();
+      renderCurrentQuiz();
+    });
+  </script>
+</body>
+</html>
